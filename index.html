@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Smart Finance Advisor — Software Engineering project Fiki. Team, problem, solution, research, business model and milestone progress.">
+  <meta name="theme-color" content="#173b33">
+  <title>SFA — Project Fiki</title>
+  <!--
+    GITHUB PAGES SETUP
+    1. Upload this file as index.html at the root of a GitHub repository.
+    2. Settings > Pages > Source: Deploy from a branch > main > / (root) > Save.
+    3. Complete the team names, photos, contact emails and project links before submission.
+    EDITING: search for TODO below. Duplicate the team-member article for each actual teammate.
+    This file is self-contained. No build step or external dependencies are required.
+  -->
+  <style>
+    :root{--paper:#f5f4ee;--white:#fffefa;--ink:#20382f;--muted:#62726a;--green:#173b33;--accent:#d7ed91;--line:#d8ded1;--soft:#e9eddf;--amber:#805320;--radius:16px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:30px}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+    a:hover{color:#386d54}
+    a:focus-visible,summary:focus-visible{outline:3px solid #47745b;outline-offset:5px;border-radius:3px}
+    ::selection{background:var(--accent);color:var(--green)}
+    p,h1,h2,h3{margin:0}
+    p+p{margin-top:14px}
+    img{display:block;max-width:100%}
+    .skip{position:fixed;left:20px;top:-80px;padding:12px 20px;background:var(--accent);z-index:20}
+    .skip:focus{top:20px}
+    .rail{position:fixed;inset:0 auto 0 0;width:252px;padding:38px 26px 24px;border-right:1px solid var(--line);display:flex;flex-direction:column;background:var(--paper);overflow-y:auto}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+    .brand-mark{width:39px;height:39px;background:var(--green);border-radius:11px;color:var(--accent);display:grid;place-items:center;font-size:16px;font-weight:800;letter-spacing:-1px}
+    .brand-name{font-weight:750;font-size:16px;letter-spacing:-.3px}
+    .brand-sub{display:block;font-weight:450;color:var(--muted);font-size:11px;letter-spacing:.6px}
+    .rail-label,.eyebrow,.section-kicker{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;font-weight:750}
+    .rail-label{margin:41px 0 12px;color:var(--muted)}
+    .nav{display:grid;gap:3px}
+    .nav a{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:7px;text-decoration:none;font-size:12px;transition:background .15s}
+    .nav a:hover{background:var(--soft);color:var(--green)}
+    .nav span{font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:17px}
+    .nav .progress-link{margin-top:12px;padding-top:14px;border-top:1px solid var(--line);border-radius:0}
+    .rail-bottom{margin-top:auto;padding-top:30px;font-size:11px;color:var(--muted)}
+    .rail-bottom strong{display:block;color:var(--ink);font-weight:650;margin:5px 0}
+    .status-dot{display:inline-block;width:6px;height:6px;background:#5b805e;border-radius:50%;margin-right:6px;vertical-align:1px}
+    .mobile-header{display:none}
+    main{margin-left:252px;padding:38px clamp(25px,5vw,82px) 0;max-width:1600px}
+    .page-top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:23px;font-size:11px;color:var(--muted)}
+    .page-top .crumb{letter-spacing:.7px;text-transform:uppercase}
+    .pill{display:inline-flex;align-items:center;gap:7px;padding:5px 10px;border:1px solid var(--line);border-radius:99px;font-size:10px;font-weight:650;white-space:nowrap}
+    .hero{background:var(--green);color:var(--white);border-radius:20px;padding:clamp(26px,4vw,54px);position:relative;overflow:hidden}
+    .hero .eyebrow{color:var(--accent)}
+    .hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(40px,4.5vw,67px);font-weight:400;line-height:1.07;letter-spacing:-2px;max-width:720px;margin-top:25px}
+    .hero .intro{max-width:600px;margin-top:24px;color:#d2ddd3;font-size:16px;line-height:1.7}
+    .hero-footer{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-top:40px;padding-top:21px;border-top:1px solid #426056}
+    .hero-footer strong{font-size:13px;font-weight:550}
+    .hero-footer small{display:block;color:#b1c8b9;font-size:11px;margin-top:3px}
+    .hero-index{color:var(--accent);font-size:46px;font-weight:350;line-height:1;letter-spacing:-2px}
+    .context-strip{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--line);padding:24px 0;margin-bottom:12px}
+    .context-strip>div{padding:0 21px;border-left:1px solid var(--line)}
+    .context-strip>div:first-child{padding-left:0;border-left:0}
+    .context-strip span{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+    .context-strip strong{font-size:13px;font-weight:650}
+    section{padding:46px 0;border-bottom:1px solid var(--line);scroll-margin-top:25px}
+    section:target .section-number{background:var(--green);color:var(--accent)}
+    .section-head{display:flex;align-items:center;gap:14px;margin-bottom:23px}
+    .section-number{width:31px;height:31px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums;flex:none;transition:background .15s}
+    h2{font:400 clamp(27px,2.5vw,36px)/1.15 Georgia,"Times New Roman",serif;letter-spacing:-.7px}
+    h3{font-size:15px;font-weight:700;line-height:1.4}
+    .lead{font-size:19px;line-height:1.65;max-width:790px;letter-spacing:-.25px}
+    .muted{color:var(--muted)}
+    .small{font-size:12px}
+    .intro-note{color:var(--muted);font-size:13px;margin-bottom:22px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    .team-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:34px}
+    .team-list{display:grid;gap:12px}
+    .team-member{display:flex;gap:18px;padding:21px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius)}
+    .portrait{width:76px;height:87px;flex:none;background:#e3e7d9;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .portrait strong{font:400 26px/1.2 Georgia,serif}
+    .portrait span{font-size:9px;color:var(--muted);margin-top:6px}
+    .member-details{min-width:0;overflow-wrap:anywhere}
+    .member-details h3{margin:1px 0 5px}
+    .member-details p{font-size:11px;line-height:1.6}
+    .member-details .role{font-size:12px;margin-bottom:6px}
+    .placeholder{border-style:dashed;background:transparent}
+    .placeholder h3{font-size:13px}
+    .role-list{margin:0;padding:0;list-style:none}
+    .role-list li{padding:12px 0;border-bottom:1px solid var(--line);font-size:12px}
+    .role-list li:first-child{padding-top:0}
+    .role-list li:last-child{border-bottom:0}
+    .role-list strong{display:block;font-size:13px;margin-bottom:3px}
+    .note{margin-top:22px;padding:15px 18px;border-left:3px solid #829c66;background:var(--soft);font-size:12px}
+    .note strong{font-weight:750}
+    .problem-list{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:28px}
+    .problem-item{padding-top:16px;border-top:2px solid var(--ink)}
+    .problem-item span{font-size:11px;color:var(--muted)}
+    .problem-item h3{margin:8px 0}
+    .problem-item p{font-size:13px;color:var(--muted)}
+    .value{margin:24px 0;padding:18px 22px;background:var(--soft);border-left:3px solid #829c66;font-size:16px;line-height:1.65}
+    .scope{display:grid;grid-template-columns:1fr 1fr;gap:23px}
+    .scope-block{padding:22px 24px;border:1px solid var(--line);border-radius:var(--radius)}
+    .tag{display:inline-block;font-size:9px;text-transform:uppercase;letter-spacing:1px;border-radius:4px;background:var(--soft);padding:3px 7px;font-weight:700;color:var(--green);margin-bottom:10px}
+    .tag.planned{color:var(--amber);background:#f0e8d7}
+    .scope-block ul{padding-left:18px;margin:13px 0 0;font-size:12px}
+    .scope-block li{padding:3px 0}
+    .audience{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+    .audience-main{border-left:3px solid var(--green);padding-left:24px}
+    .audience-main h3{font:400 24px/1.35 Georgia,serif;margin-bottom:14px}
+    .audience p{font-size:13px}
+    .audience .section-kicker{color:var(--muted);margin-bottom:10px}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}
+    table{border-collapse:collapse;width:100%;font-size:12px;line-height:1.6}
+    th{text-align:left;background:var(--soft);font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:700;padding:13px 17px}
+    td{padding:16px 17px;vertical-align:top;border-top:1px solid var(--line)}
+    td:first-child{font-weight:650;min-width:170px;width:26%}
+    tbody tr:nth-child(even){background:#f9f9f4}
+    .external{font-size:10px;padding-left:3px}
+    .method{counter-reset:steps;margin:24px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+    .method li{counter-increment:steps;padding:18px 0;border-top:1px solid var(--line)}
+    .method li:before{content:"0" counter(steps);display:block;color:#75856e;font-size:11px;margin-bottom:13px}
+    .method h3{margin-bottom:8px}
+    .method p{font-size:12px;color:var(--muted)}
+    .metric-note{margin-top:15px;font-size:11px;color:var(--muted)}
+    .costs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .costs>div{border-left:1px solid var(--line);padding-left:18px}
+    .costs>div:first-child{border-left:0;padding-left:0}
+    .costs .section-kicker{color:var(--muted);margin-bottom:10px}
+    .costs p{font-size:13px;margin-top:9px}
+    .revenue{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .revenue>div{padding:22px 24px;border-top:2px solid var(--green);background:var(--white)}
+    .revenue .section-kicker{color:var(--muted);margin-bottom:10px}
+    .revenue p{font-size:13px;margin-top:12px}
+    .timeline{margin:0;padding:0;list-style:none}
+    .timeline>li{position:relative;margin-left:7px;padding:0 0 28px 30px;border-left:1px solid #b3c4ad}
+    .timeline>li:before{content:"";width:11px;height:11px;position:absolute;left:-6px;top:6px;border:2px solid var(--paper);background:#93ac87;border-radius:50%;box-shadow:0 0 0 1px #93ac87}
+    .timeline>li.current:before{background:var(--green);box-shadow:0 0 0 1px var(--green)}
+    .timeline>li:last-child{border-left-color:transparent;padding-bottom:0}
+    .timeline .time{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+    .timeline h3{margin:7px 0}
+    .timeline p{font-size:13px}
+    details{margin-top:14px;font-size:12px}
+    summary{cursor:pointer;font-weight:650;text-underline-offset:4px}
+    details[open] summary{margin-bottom:10px}
+    details ul{margin:0;padding-left:18px}
+    .source-list{display:flex;flex-wrap:wrap;gap:8px 20px;list-style:none;margin:12px 0 0;padding:0;font-size:11px}
+    .completion{margin:30px 0 0;padding:18px 22px;border:1px dashed #a3ad96;border-radius:12px;font-size:12px}
+    .completion strong{display:block;margin-bottom:7px}
+    .completion ul{margin:0;padding-left:18px}
+    footer{padding:28px 0 35px;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:var(--muted)}
+    footer a{white-space:nowrap}
+    @media(min-width:1600px){main{margin-right:auto}}
+    @media(max-width:1100px){
+      .rail{width:217px;padding:30px 18px}
+      main{margin-left:217px;padding-left:30px;padding-right:30px}
+      .hero h1{font-size:47px}
+      .team-layout{grid-template-columns:1fr}
+      .role-list{display:grid;grid-template-columns:1fr 1fr;column-gap:26px}
+      .role-list li:nth-child(2){padding-top:0}
+      .method{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:760px){
+      html{scroll-padding-top:90px}
+      .rail{display:none}
+      .mobile-header{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px 20px;background:var(--paper);border-bottom:1px solid var(--line);z-index:10}
+      .mobile-header .brand-mark{width:32px;height:32px;border-radius:8px;font-size:13px}
+      .mobile-header .brand-name{font-size:13px}
+      .mobile-header .brand-sub{font-size:9px}
+      .mobile-menu{margin:0}
+      .mobile-menu summary{padding:7px 10px;border:1px solid var(--line);border-radius:6px;font-size:11px;list-style:none}
+      .mobile-menu summary::-webkit-details-marker{display:none}
+      .mobile-menu[open] summary{margin:0;background:var(--soft)}
+      .mobile-menu nav{position:absolute;top:64px;left:0;right:0;background:var(--paper);padding:14px 20px;border-bottom:1px solid var(--line);box-shadow:0 12px 20px #173b3310;display:grid;grid-template-columns:1fr 1fr;gap:3px}
+      .mobile-menu nav a{font-size:12px;padding:7px;text-decoration:none}
+      main{margin:0;padding:23px 20px 0}
+      .page-top{font-size:9px;margin-bottom:17px;align-items:start}
+      .page-top .crumb{max-width:160px}
+      .pill{font-size:9px;padding:4px 8px}
+      .hero{padding:29px 25px;border-radius:15px}
+      .hero h1{font-size:42px;letter-spacing:-1.4px}
+      .hero .intro{font-size:14px}
+      .hero-footer{margin-top:30px}
+      .hero-footer strong{font-size:11px}
+      .hero-footer small{font-size:9px}
+      .hero-index{font-size:37px}
+      .context-strip{gap:13px}
+      .context-strip>div{padding:0 0 0 13px}
+      .context-strip span{font-size:8px;letter-spacing:.6px}
+      .context-strip strong{font-size:11px;line-height:1.5;display:block}
+      section{padding:33px 0;scroll-margin-top:85px}
+      .section-head{gap:11px;margin-bottom:19px}
+      h2{font-size:29px}
+      .lead{font-size:17px}
+      .problem-list,.scope,.audience,.two-col,.costs,.revenue{grid-template-columns:1fr}
+      .problem-list{gap:19px;margin-top:23px}
+      .problem-item{padding-top:12px}
+      .problem-item h3{margin:5px 0}
+      .team-layout{gap:23px}
+      .role-list{display:block}
+      .role-list li:nth-child(2){padding-top:12px}
+      .team-member{padding:17px}
+      .portrait{width:60px;height:76px}
+      .value{font-size:15px;padding:18px}
+      .scope-block{padding:20px}
+      .method{gap:13px}
+      .method p{font-size:11px}
+      .table-wrap{border-radius:8px}
+      td:first-child{min-width:130px}
+      td,th{padding:13px}
+      .costs{gap:20px}
+      .costs>div{border:0;border-top:1px solid var(--line);padding:16px 0 0}
+      .costs>div:first-child{border:0;padding:0}
+      footer{flex-direction:column;gap:6px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+    @media print{
+      body{background:white;font-size:10pt;color:#17251d}
+      .rail,.mobile-header,.page-top,.skip,.completion,footer a{display:none}
+      main{margin:0;padding:0;max-width:none}
+      .hero{background:#eef1e5!important;color:#17251d;padding:22px;border:1px solid #cbd3c2}
+      .hero .eyebrow,.hero .intro,.hero-footer small,.hero-index{color:#263f2f}
+      .hero h1{font-size:32pt}
+      .hero-footer{margin-top:18px;border-color:#cbd3c2}
+      section{padding:22px 0;break-inside:auto}
+      h2,h3,.section-head{break-after:avoid}
+      .team-member,.scope-block,.note,.timeline>li{break-inside:avoid}
+      .table-wrap{overflow:visible}
+      th,td{padding:8px}
+      a{text-decoration:none}
+      .source-list a{text-decoration:underline}
+      .context-strip{padding:15px 0}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  <aside class="rail" aria-label="Project navigation">
+    <a class="brand" href="#overview" aria-label="Smart Finance Advisor overview">
+      <span class="brand-mark" aria-hidden="true">sfa.</span>
+      <span class="brand-name">Smart Finance Advisor<span class="brand-sub">PROJECT FIKI / 2026</span></span>
+    </a>
+    <p class="rail-label">On this page</p>
+    <nav class="nav" aria-label="Milestone one sections">
+      <a href="#overview"><span>01</span> Project overview</a>
+      <a href="#team"><span>02</span> Team</a>
+      <a href="#problem"><span>03</span> Problem</a>
+      <a href="#solution"><span>04</span> Solution</a>
+      <a href="#customers"><span>05</span> Customer segments</a>
+      <a href="#competition"><span>06</span> Competition</a>
+      <a href="#advantage"><span>07</span> Competitive advantage</a>
+      <a href="#metrics"><span>08</span> Key metrics</a>
+      <a href="#costs"><span>09</span> Cost structure</a>
+      <a href="#revenue"><span>10</span> Revenue streams</a>
+      <a class="progress-link" href="#progress"><span>M1</span> Progress</a>
+      <a href="#m2"><span>M2</span> Validation 1 (idea)</a>
+    </nav>
+    <div class="rail-bottom">
+      <span class="status-dot" aria-hidden="true"></span>Project definition
+      <strong>M1 · 19 October 2026</strong>
+      Updated 18 October 2026
+    </div>
+  </aside>
+
+  <header class="mobile-header">
+    <a class="brand" href="#overview">
+      <span class="brand-mark" aria-hidden="true">sfa.</span>
+      <span class="brand-name">Smart Finance Advisor<span class="brand-sub">PROJECT FIKI</span></span>
+    </a>
+    <details class="mobile-menu">
+      <summary>Contents +</summary>
+      <nav aria-label="Mobile page contents">
+        <a href="#overview">01 / Overview</a><a href="#team">02 / Team</a>
+        <a href="#problem">03 / Problem</a><a href="#solution">04 / Solution</a>
+        <a href="#customers">05 / Customers</a><a href="#competition">06 / Competition</a>
+        <a href="#advantage">07 / Advantage</a><a href="#metrics">08 / Metrics</a>
+        <a href="#costs">09 / Costs</a><a href="#revenue">10 / Revenue</a>
+        <a href="#progress">M1 / Progress</a><a href="#m2">M2 / Validation 1 (idea)</a>
+      </nav>
+    </details>
+  </header>
+
+  <main id="main">
+    <div class="page-top">
+      <span class="crumb">Software Engineering / Project documentation</span>
+      <span class="pill"><span class="status-dot" aria-hidden="true"></span>M1 · Draft for team review</span>
+    </div>
+
+    <div class="hero" id="overview">
+      <p class="eyebrow">M1 / Project description</p>
+      <h1>Smart Finance<br>Advisor</h1>
+      <p class="intro">SFA is a personal finance application for people who use several bank accounts. This page documents our team, the project and our progress during the course.</p>
+      <div class="hero-footer">
+        <div><strong>Project description</strong><small>Software Engineering · Milestone 1 · 19 October 2026</small></div>
+        <span class="hero-index" aria-hidden="true">M1</span>
+      </div>
+    </div>
+    <div class="context-strip" aria-label="Project summary">
+      <div><span>Starting point</span><strong>Existing thesis prototype</strong></div>
+      <div><span>Planned direction</span><strong>Open Banking integration</strong></div>
+      <div><span>Initial audience</span><strong>People with multiple accounts</strong></div>
+    </div>
+
+    <section id="team" aria-labelledby="team-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">02</span><h2 id="team-title">Team and roles</h2></div>
+      <p class="intro-note">We still need to add the remaining team members, photos and emails, and confirm the roles below.</p>
+      <div class="team-layout">
+        <div class="team-list">
+          <!-- TODO: Replace the portrait placeholder with a real image, for example:
+               <img class="portrait" src="assets/cristian.jpg" alt="Cristian Braniște" style="object-fit:cover">
+               Replace the contact note with an actual mailto link. -->
+          <article class="team-member">
+            <div class="portrait" role="img" aria-label="Cristian's photo is to be added"><strong>CB</strong><span>Photo to add</span></div>
+            <div class="member-details">
+              <h3>Cristian Braniște</h3>
+              <p class="role">Product &amp; backend · proposed</p>
+              <p class="muted">Requirements, financial calculations and the existing SFA architecture.</p>
+              <p class="muted">Contact email: to be added</p>
+            </div>
+          </article>
+          <!-- TODO: Replace this block with one team-member article per remaining team member.
+               Do not retain an invented team size or invented names. -->
+          <article class="team-member placeholder">
+            <div class="portrait" aria-hidden="true"><strong>+</strong><span>Team</span></div>
+            <div class="member-details">
+              <h3>Remaining team members</h3>
+              <p class="muted">Add each member's name, portrait, contact email and agreed responsibilities.</p>
+            </div>
+          </article>
+        </div>
+        <ul class="role-list" aria-label="Responsibilities to assign">
+          <li><strong>Frontend &amp; experience</strong><span class="muted">Responsive interface, onboarding and usability.</span></li>
+          <li><strong>Integrations &amp; data protection</strong><span class="muted">Bank provider evaluation, synchronization and data handling.</span></li>
+          <li><strong>Quality &amp; customer research</strong><span class="muted">Test scenarios, user interviews and feedback.</span></li>
+          <li><strong>Shared project work</strong><span class="muted">Code review, milestone evidence and scope decisions.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="problem" aria-labelledby="problem-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">03</span><h2 id="problem-title">Problem</h2></div>
+      <p class="lead">When spending is spread across several accounts, checking each banking app does not always make it easy to see the total or compare it with a monthly budget.</p>
+      <div class="problem-list">
+        <div class="problem-item"><span>01</span><h3>Spending across accounts</h3><p>Total spending, recurring payments and budget progress can be difficult to review together.</p></div>
+        <div class="problem-item"><span>02</span><h3>Manual tracking</h3><p>Collecting and categorizing data takes time before users can evaluate their spending.</p></div>
+        <div class="problem-item"><span>03</span><h3>Data privacy</h3><p>Users need to understand what financial information they share and how it will be processed.</p></div>
+      </div>
+      <div class="note"><strong>Class discussion.</strong> When we presented the idea, classmates said they used multiple accounts and would find a combined view useful. We still need interviews to understand how often this causes a problem and what they do about it now.</div>
+    </section>
+
+    <section id="solution" aria-labelledby="solution-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">04</span><h2 id="solution-title">Solution and value proposition</h2></div>
+      <p>We plan to bring transactions from supported bank accounts into SFA, group expenses by category and compare them with the user’s budget. Recommendations will explain which spending patterns may be worth reviewing.</p>
+      <div class="value">The aim is to reduce the work needed to review spending across accounts and decide where to adjust a budget.</div>
+      <div class="scope">
+        <div class="scope-block">
+          <span class="tag">Existing baseline</span><h3>The thesis prototype</h3>
+          <ul><li>Bank-statement import and categorization</li><li>Dashboard, budgets and alerts</li><li>Recurring-transaction detection</li><li>Rule-based recommendations</li><li>AI-generated monthly summaries</li></ul>
+        </div>
+        <div class="scope-block">
+          <span class="tag planned">Planned development</span><h3>The team project</h3>
+          <ul><li>Consent-based, read-only Open Banking integration</li><li>A consolidated onboarding experience</li><li>Recommendations linked to supporting data</li><li>Review of users' chosen budget adjustments</li></ul>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top:18px">We have not selected an Open Banking provider yet. We need to check bank coverage and costs, explain what data is shared, and implement access revocation and deletion. We also want to limit the information sent to external AI services.</p>
+    </section>
+
+    <section id="customers" aria-labelledby="customers-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">05</span><h2 id="customers-title">Customer segments</h2></div>
+      <div class="audience">
+        <div class="audience-main"><p class="section-kicker">Primary segment</p><h3>People in Romania who actively use at least two bank accounts.</h3><p class="muted">They want to manage their spending without repeatedly consolidating their finances by hand.</p></div>
+        <div><p class="section-kicker">Initial recruitment</p><p>We plan to start with students who have an income and people in their first years of work, using university and professional contacts to find interview participants.</p><p class="muted">We are starting with individual budgets. We may explore household budgeting later if interviews show a need for it.</p></div>
+      </div>
+    </section>
+
+    <section id="competition" aria-labelledby="competition-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">06</span><h2 id="competition-title">Competition</h2></div>
+      <p class="intro-note">The comparison below is based on the providers’ websites, checked on 18 October 2026. We have not tested all of these features ourselves.</p>
+      <div class="table-wrap">
+        <table>
+          <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Existing alternatives and their relevant advertised capabilities</caption>
+          <thead><tr><th scope="col">Alternative</th><th scope="col">Relevant capabilities</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://iancuguda.ro/mim/" target="_blank" rel="noopener noreferrer">Money in Motion<span class="external" aria-hidden="true">↗</span></a></td><td>Free personal finance tracking, bank synchronization, family sharing and financial education.</td></tr>
+            <tr><td><a href="https://budgetbakers.com/en/products/wallet/features/" target="_blank" rel="noopener noreferrer">Wallet<span class="external" aria-hidden="true">↗</span></a></td><td>Bank synchronization, automatic categorization, budgets, spending insights and personalized recommendations.</td></tr>
+            <tr><td><a href="https://aurainsights.ai/ro/" target="_blank" rel="noopener noreferrer">AuraInsights<span class="external" aria-hidden="true">↗</span></a></td><td>Romanian bank connectivity, AI spending analysis, conversational assistance and savings goals.</td></tr>
+            <tr><td><a href="https://www.ynab.com/features" target="_blank" rel="noopener noreferrer">YNAB<span class="external" aria-hidden="true">↗</span></a></td><td>Spending plans, targets and bank import where supported.</td></tr>
+            <tr><td>Current workflows</td><td>Separate banking applications and spreadsheets: familiar alternatives against which to compare effort and convenience.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="advantage" aria-labelledby="advantage-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">07</span><h2 id="advantage-title">Proposed competitive advantage</h2></div>
+      <p class="lead">We want users to be able to check why SFA makes a recommendation, choose whether to follow it and review the result later.</p>
+      <ol class="method">
+        <li><h3>Identify</h3><p>Find a spending change or a budget that needs attention.</p></li>
+        <li><h3>Explain</h3><p>Show the period, transactions and calculation behind the suggestion.</p></li>
+        <li><h3>Choose</h3><p>Let the user correct the data, reject the suggestion or choose an adjustment.</p></li>
+        <li><h3>Review</h3><p>Compare later spending with the adjustment the user chose.</p></li>
+      </ol>
+      <div class="note">We need to find out whether this is more useful than the tools people already use. Competitors also offer bank connections and AI features, so those alone are not enough to set SFA apart.</div>
+    </section>
+
+    <section id="metrics" aria-labelledby="metrics-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">08</span><h2 id="metrics-title">Key metrics</h2></div>
+      <p class="intro-note">These are the metrics we plan to track when we have pilot users.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Metric</th><th scope="col">What we will measure</th></tr></thead>
+        <tbody>
+          <tr><td>Activation</td><td>Share of eligible onboarding starters who connect two accounts and view their consolidated overview.</td></tr>
+          <tr><td>Time to first useful insight</td><td>Time from onboarding start to a recommendation the user understands and reports finding useful.</td></tr>
+          <tr><td>Week-four retention</td><td>Share of activated users who review their finances or update a budget during the fourth week after activation.</td></tr>
+          <tr><td>Recommendation usefulness</td><td>Helpful ratings divided by all recommendation ratings, reported together with the number of ratings.</td></tr>
+          <tr><td>Data reliability</td><td>Synchronization success and transaction/category accuracy on a verified sample, including duplicate and internal-transfer checks.</td></tr>
+          <tr><td>Cost per active user</td><td>Monthly operating costs divided by monthly active users, tracking bank-provider and AI costs separately.</td></tr>
+        </tbody>
+      </table></div>
+      <p class="metric-note">We will use the first pilot results to set realistic targets.</p>
+    </section>
+
+    <section id="costs" aria-labelledby="costs-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">09</span><h2 id="costs-title">Cost structure</h2></div>
+      <div class="costs">
+        <div><p class="section-kicker">Baseline</p><h3>Infrastructure</h3><p class="muted">Application hosting, database, domain, monitoring and backups.</p></div>
+        <div><p class="section-kicker">Usage-dependent</p><h3>Connected services</h3><p class="muted">Bank-data access, AI requests, storage growth and payment processing. Provider minimum commitments may add fixed costs.</p></div>
+        <div><p class="section-kicker">Ongoing</p><h3>People &amp; maintenance</h3><p class="muted">Development, support, integration upkeep, security and privacy work, and user research.</p></div>
+      </div>
+      <p class="small muted" style="margin-top:23px">We will estimate monthly costs once we know the provider’s terms and expected usage. Development time also counts as a project cost.</p>
+    </section>
+
+    <section id="revenue" aria-labelledby="revenue-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">10</span><h2 id="revenue-title">Revenue streams</h2></div>
+      <div class="revenue">
+        <div><p class="section-kicker">Initial hypothesis</p><h3>Freemium subscription</h3><p>Basic tracking with a paid tier for ongoing automated analysis and more advanced planning.</p></div>
+        <div><p class="section-kicker">Possible later direction</p><h3>Household subscription</h3><p>A shared experience to explore after the individual product has been validated.</p></div>
+      </div>
+      <div class="note">We have not set a price yet. We need to check provider costs and ask potential users whether they would pay for the proposed features.</div>
+    </section>
+
+    <section id="progress" aria-labelledby="progress-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">↗</span><h2 id="progress-title">M1 progress</h2></div>
+      <p class="intro-note">Work completed so far and decisions still to make.</p>
+      <ol class="timeline">
+        <li><p class="time">Before this course</p><h3>Existing SFA prototype</h3><p>Cristian developed the initial SFA prototype: statement import, transaction analysis, budgets, rule-based recommendations and AI summaries.</p>
+          <details><summary>Technical baseline</summary><p>Kotlin and Spring Boot backend, Vue frontend and MongoDB persistence. This is prior work that provides the starting point for the team project.</p></details>
+          <!-- TODO: Insert real demo and repository links here. -->
+          <p class="small muted" style="margin-top:10px">Demo and repository links: to be added.</p>
+        </li>
+        <li class="current"><p class="time">M1 · 19 October 2026</p><h3>Project definition</h3><p>Project description, competitor review, proposed responsibilities and initial metrics prepared for team review.</p>
+          <details open><summary>Open decisions</summary><ul><li>Complete team details and confirm role ownership.</li><li>Agree the scope of the first Open Banking increment.</li><li>Choose a provider evaluation and user-research plan.</li></ul></details>
+        </li>
+        
+      </ol>
+      <div class="completion">
+        <strong>Draft completion checklist</strong>
+        <ul><li>Add all team members, real photographs and contact emails.</li><li>Confirm roles, scope and business assumptions with the team.</li><li>Add the demo and repository links.</li><li>Check access to the published page and submit its URL through the <a href="https://forms.gle/5ze3awnGupHm2qoC9" target="_blank" rel="noopener noreferrer">Fiki Submission Form</a>.</li></ul>
+      </div>
+    </section>
+
+    <section id="m2" aria-labelledby="m2-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">M2</span><h2 id="m2-title">Validation 1 (idea) · 02.11.26</h2></div>
+    </section>
+
+    <footer>
+      <span>Smart Finance Advisor · Software Engineering Fiki · Updated 18 October 2026</span>
+      <a href="#overview">Back to overview ↑</a>
+    </footer>
+  </main>
+  <script>
+    // Close the native mobile contents menu after selecting a section.
+    document.querySelectorAll('.mobile-menu nav a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        link.closest('details').removeAttribute('open');
+      });
+    });
+  </script>
+</body>
+</html>
+
