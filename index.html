@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +7,6 @@
     content="Smart Finance Advisor — Software Engineering project Fiki. Team, problem, solution, research, business model and milestone progress.">
   <meta name="theme-color" content="#173b33">
   <title>SFA — Project Fiki</title>
-
   <style>
     :root {
       --paper: #f5f4ee;
@@ -22,61 +20,50 @@
       --amber: #805320;
       --radius: 16px
     }
-
     * {
       box-sizing: border-box
     }
-
     html {
       scroll-behavior: smooth;
       scroll-padding-top: 30px
     }
-
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
       font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
     }
-
     a {
       color: inherit;
       text-underline-offset: 4px;
       text-decoration-thickness: 1px
     }
-
     a:hover {
       color: #386d54
     }
-
     a:focus-visible,
     summary:focus-visible {
       outline: 3px solid #47745b;
       outline-offset: 5px;
       border-radius: 3px
     }
-
     ::selection {
       background: var(--accent);
       color: var(--green)
     }
-
     p,
     h1,
     h2,
     h3 {
       margin: 0
     }
-
     p+p {
       margin-top: 14px
     }
-
     img {
       display: block;
       max-width: 100%
     }
-
     .skip {
       position: fixed;
       left: 20px;
@@ -85,11 +72,9 @@
       background: var(--accent);
       z-index: 20
     }
-
     .skip:focus {
       top: 20px
     }
-
     .rail {
       position: fixed;
       inset: 0 auto 0 0;
@@ -101,14 +86,12 @@
       background: var(--paper);
       overflow-y: auto
     }
-
     .brand {
       display: flex;
       align-items: center;
       gap: 11px;
       text-decoration: none
     }
-
     .brand-mark {
       width: 39px;
       height: 39px;
@@ -121,13 +104,11 @@
       font-weight: 800;
       letter-spacing: -1px
     }
-
     .brand-name {
       font-weight: 750;
       font-size: 16px;
       letter-spacing: -.3px
     }
-
     .brand-sub {
       display: block;
       font-weight: 450;
@@ -135,7 +116,6 @@
       font-size: 11px;
       letter-spacing: .6px
     }
-
     .rail-label,
     .eyebrow,
     .section-kicker {
@@ -144,17 +124,14 @@
       text-transform: uppercase;
       font-weight: 750
     }
-
     .rail-label {
       margin: 41px 0 12px;
       color: var(--muted)
     }
-
     .nav {
       display: grid;
       gap: 3px
     }
-
     .nav a {
       display: flex;
       align-items: center;
@@ -165,16 +142,13 @@
       font-size: 12px;
       transition: background .15s
     }
-
     .nav a:hover {
       background: var(--soft);
       color: var(--green)
     }
-
     .nav-group {
       margin: 0
     }
-
     .nav-group>summary {
       display: flex;
       align-items: center;
@@ -185,11 +159,9 @@
       list-style: none;
       cursor: pointer
     }
-
     .nav-group>summary::-webkit-details-marker {
       display: none
     }
-
     .nav-group>summary:before {
       content: "+";
       width: 9px;
@@ -197,43 +169,36 @@
       font-size: 14px;
       line-height: 1
     }
-
     .nav-group[open]>summary:before {
       content: "−"
     }
-
     .nav-group>summary:hover {
       background: var(--soft);
       color: var(--green)
     }
-
     .nav-group .nav-children {
       display: grid;
       gap: 1px;
       padding-left: 12px
     }
-
     .nav span {
       font-size: 10px;
       color: var(--muted);
       font-variant-numeric: tabular-nums;
       min-width: 17px
     }
-
     .rail-bottom {
       margin-top: auto;
       padding-top: 30px;
       font-size: 11px;
       color: var(--muted)
     }
-
     .rail-bottom strong {
       display: block;
       color: var(--ink);
       font-weight: 650;
       margin: 5px 0
     }
-
     .status-dot {
       display: inline-block;
       width: 6px;
@@ -243,17 +208,14 @@
       margin-right: 6px;
       vertical-align: 1px
     }
-
     .mobile-header {
       display: none
     }
-
     main {
       margin-left: 252px;
       padding: 38px clamp(25px, 5vw, 82px) 0;
       width: auto
     }
-
     .page-top {
       display: flex;
       justify-content: space-between;
@@ -263,12 +225,10 @@
       font-size: 11px;
       color: var(--muted)
     }
-
     .page-top .crumb {
       letter-spacing: .7px;
       text-transform: uppercase
     }
-
     .pill {
       display: inline-flex;
       align-items: center;
@@ -280,7 +240,6 @@
       font-weight: 650;
       white-space: nowrap
     }
-
     .hero {
       background: var(--green);
       color: var(--white);
@@ -289,11 +248,9 @@
       position: relative;
       overflow: hidden
     }
-
     .hero .eyebrow {
       color: var(--accent)
     }
-
     .hero h1 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(40px, 4.5vw, 67px);
@@ -303,7 +260,6 @@
       max-width: 720px;
       margin-top: 25px
     }
-
     .hero .intro {
       max-width: 600px;
       margin-top: 24px;
@@ -311,7 +267,6 @@
       font-size: 16px;
       line-height: 1.7
     }
-
     .hero-footer {
       display: flex;
       justify-content: space-between;
@@ -321,19 +276,16 @@
       padding-top: 21px;
       border-top: 1px solid #426056
     }
-
     .hero-footer strong {
       font-size: 13px;
       font-weight: 550
     }
-
     .hero-footer small {
       display: block;
       color: #b1c8b9;
       font-size: 11px;
       margin-top: 3px
     }
-
     .hero-index {
       color: var(--accent);
       font-size: 46px;
@@ -341,7 +293,6 @@
       line-height: 1;
       letter-spacing: -2px
     }
-
     .context-strip {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -349,17 +300,14 @@
       padding: 24px 0;
       margin-bottom: 12px
     }
-
     .context-strip>div {
       padding: 0 21px;
       border-left: 1px solid var(--line)
     }
-
     .context-strip>div:first-child {
       padding-left: 0;
       border-left: 0
     }
-
     .context-strip span {
       display: block;
       font-size: 10px;
@@ -368,30 +316,25 @@
       letter-spacing: 1px;
       margin-bottom: 5px
     }
-
     .context-strip strong {
       font-size: 13px;
       font-weight: 650
     }
-
     section {
       padding: 46px 0;
       border-bottom: 1px solid var(--line);
       scroll-margin-top: 25px
     }
-
     section:target .section-number {
       background: var(--green);
       color: var(--accent)
     }
-
     .section-head {
       display: flex;
       align-items: center;
       gap: 14px;
       margin-bottom: 23px
     }
-
     .section-number {
       width: 31px;
       height: 31px;
@@ -405,56 +348,46 @@
       flex: none;
       transition: background .15s
     }
-
     h2 {
       font: 400 clamp(27px, 2.5vw, 36px)/1.15 Georgia, "Times New Roman", serif;
       letter-spacing: -.7px
     }
-
     h3 {
       font-size: 15px;
       font-weight: 700;
       line-height: 1.4
     }
-
     .lead {
       font-size: 19px;
       line-height: 1.65;
       max-width: 790px;
       letter-spacing: -.25px
     }
-
     .muted {
       color: var(--muted)
     }
-
     .small {
       font-size: 12px
     }
-
     .intro-note {
       color: var(--muted);
       font-size: 13px;
       margin-bottom: 22px
     }
-
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px
     }
-
     .team-layout {
       display: grid;
       grid-template-columns: 1.15fr 1fr;
       gap: 34px
     }
-
     .team-list {
       display: grid;
       gap: 12px
     }
-
     .team-member {
       display: flex;
       gap: 18px;
@@ -463,7 +396,6 @@
       border: 1px solid var(--line);
       border-radius: var(--radius)
     }
-
     .portrait {
       width: 76px;
       height: 87px;
@@ -475,71 +407,57 @@
       align-items: center;
       justify-content: center
     }
-
     .portrait strong {
       font: 400 26px/1.2 Georgia, serif
     }
-
     .portrait span {
       font-size: 9px;
       color: var(--muted);
       margin-top: 6px
     }
-
     .member-details {
       min-width: 0;
       overflow-wrap: anywhere
     }
-
     .member-details h3 {
       margin: 1px 0 5px
     }
-
     .member-details p {
       font-size: 11px;
       line-height: 1.6
     }
-
     .member-details .role {
       font-size: 12px;
       margin-bottom: 6px
     }
-
     .placeholder {
       border-style: dashed;
       background: transparent
     }
-
     .placeholder h3 {
       font-size: 13px
     }
-
     .role-list {
       margin: 0;
       padding: 0;
       list-style: none
     }
-
     .role-list li {
       padding: 12px 0;
       border-bottom: 1px solid var(--line);
       font-size: 12px
     }
-
     .role-list li:first-child {
       padding-top: 0
     }
-
     .role-list li:last-child {
       border-bottom: 0
     }
-
     .role-list strong {
       display: block;
       font-size: 13px;
       margin-bottom: 3px
     }
-
     .note {
       margin-top: 22px;
       padding: 15px 18px;
@@ -547,37 +465,30 @@
       background: var(--soft);
       font-size: 12px
     }
-
     .note strong {
       font-weight: 750
     }
-
     .problem-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
       margin-top: 28px
     }
-
     .problem-item {
       padding-top: 16px;
       border-top: 2px solid var(--ink)
     }
-
     .problem-item span {
       font-size: 11px;
       color: var(--muted)
     }
-
     .problem-item h3 {
       margin: 8px 0
     }
-
     .problem-item p {
       font-size: 13px;
       color: var(--muted)
     }
-
     .value {
       margin: 24px 0;
       padding: 18px 22px;
@@ -586,19 +497,16 @@
       font-size: 16px;
       line-height: 1.65
     }
-
     .scope {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 23px
     }
-
     .scope-block {
       padding: 22px 24px;
       border: 1px solid var(--line);
       border-radius: var(--radius)
     }
-
     .tag {
       display: inline-block;
       font-size: 9px;
@@ -611,61 +519,50 @@
       color: var(--green);
       margin-bottom: 10px
     }
-
     .tag.planned {
       color: var(--amber);
       background: #f0e8d7
     }
-
     .scope-block ul {
       padding-left: 18px;
       margin: 13px 0 0;
       font-size: 12px
     }
-
     .scope-block li {
       padding: 3px 0
     }
-
     .audience {
       display: grid;
       grid-template-columns: 1.3fr 1fr;
       gap: 28px
     }
-
     .audience-main {
       border-left: 3px solid var(--green);
       padding-left: 24px
     }
-
     .audience-main h3 {
       font: 400 24px/1.35 Georgia, serif;
       margin-bottom: 14px
     }
-
     .audience p {
       font-size: 13px
     }
-
     .audience .section-kicker {
       color: var(--muted);
       margin-bottom: 10px
     }
-
     .table-wrap {
       overflow: auto;
       border: 1px solid var(--line);
       border-radius: 12px;
       max-width: 1200px
     }
-
     table {
       border-collapse: collapse;
       width: 100%;
       font-size: 12px;
       line-height: 1.6
     }
-
     th {
       text-align: left;
       background: var(--soft);
@@ -675,28 +572,23 @@
       font-weight: 700;
       padding: 13px 17px
     }
-
     td {
       padding: 16px 17px;
       vertical-align: top;
       border-top: 1px solid var(--line)
     }
-
     td:first-child {
       font-weight: 650;
       min-width: 170px;
       width: 26%
     }
-
     tbody tr:nth-child(even) {
       background: #f9f9f4
     }
-
     .external {
       font-size: 10px;
       padding-left: 3px
     }
-
     .method {
       counter-reset: steps;
       margin: 24px 0 0;
@@ -706,13 +598,11 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 17px
     }
-
     .method li {
       counter-increment: steps;
       padding: 18px 0;
       border-top: 1px solid var(--line)
     }
-
     .method li:before {
       content: "0" counter(steps);
       display: block;
@@ -720,90 +610,73 @@
       font-size: 11px;
       margin-bottom: 13px
     }
-
     .method h3 {
       margin-bottom: 8px
     }
-
     .method p {
       font-size: 12px;
       color: var(--muted)
     }
-
     .metric-note {
       margin-top: 15px;
       font-size: 11px;
       color: var(--muted)
     }
-
     .costs {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px
     }
-
     .costs>div {
       border-left: 1px solid var(--line);
       padding-left: 18px
     }
-
     .costs>div:first-child {
       border-left: 0;
       padding-left: 0
     }
-
     .costs .section-kicker {
       color: var(--muted);
       margin-bottom: 10px
     }
-
     .costs p {
       font-size: 13px;
       margin-top: 9px
     }
-
     .revenue {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px
     }
-
     .revenue>div {
       padding: 22px 24px;
       border-top: 2px solid var(--green);
       background: var(--white)
     }
-
     .revenue .section-kicker {
       color: var(--muted);
       margin-bottom: 10px
     }
-
     .revenue p {
       font-size: 13px;
       margin-top: 12px
     }
-
     details {
       margin-top: 14px;
       font-size: 12px
     }
-
     summary {
       cursor: pointer;
       font-weight: 650;
       text-underline-offset: 4px
     }
-
     details[open] summary {
       margin-bottom: 10px
     }
-
     details ul {
       margin: 0;
       padding-left: 18px
     }
-
     .source-list {
       display: flex;
       flex-wrap: wrap;
@@ -813,7 +686,6 @@
       padding: 0;
       font-size: 11px
     }
-
     footer {
       padding: 28px 0 35px;
       display: flex;
@@ -822,55 +694,44 @@
       font-size: 11px;
       color: var(--muted)
     }
-
     footer a {
       white-space: nowrap
     }
-
     @media(max-width:1100px) {
       .rail {
         width: 217px;
         padding: 30px 18px
       }
-
       main {
         margin-left: 217px;
         padding-left: 30px;
         padding-right: 30px
       }
-
       .hero h1 {
         font-size: 47px
       }
-
       .team-layout {
         grid-template-columns: 1fr
       }
-
       .role-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 26px
       }
-
       .role-list li:nth-child(2) {
         padding-top: 0
       }
-
       .method {
         grid-template-columns: 1fr 1fr
       }
     }
-
     @media(max-width:760px) {
       html {
         scroll-padding-top: 90px
       }
-
       .rail {
         display: none
       }
-
       .mobile-header {
         position: sticky;
         top: 0;
@@ -883,26 +744,21 @@
         border-bottom: 1px solid var(--line);
         z-index: 10
       }
-
       .mobile-header .brand-mark {
         width: 32px;
         height: 32px;
         border-radius: 8px;
         font-size: 13px
       }
-
       .mobile-header .brand-name {
         font-size: 13px
       }
-
       .mobile-header .brand-sub {
         font-size: 9px
       }
-
       .mobile-menu {
         margin: 0
       }
-
       .mobile-menu summary {
         padding: 7px 10px;
         border: 1px solid var(--line);
@@ -910,16 +766,13 @@
         font-size: 11px;
         list-style: none
       }
-
       .mobile-menu summary::-webkit-details-marker {
         display: none
       }
-
       .mobile-menu[open] summary {
         margin: 0;
         background: var(--soft)
       }
-
       .mobile-menu nav {
         position: absolute;
         top: 64px;
@@ -931,100 +784,79 @@
         box-shadow: 0 12px 20px #173b3310;
         display: block
       }
-
       .mobile-menu nav a {
         font-size: 12px;
         padding: 7px;
         text-decoration: none
       }
-
       main {
         margin: 0;
         padding: 23px 20px 0
       }
-
       .page-top {
         font-size: 9px;
         margin-bottom: 17px;
         align-items: start
       }
-
       .page-top .crumb {
         max-width: 160px
       }
-
       .pill {
         font-size: 9px;
         padding: 4px 8px
       }
-
       .hero {
         padding: 29px 25px;
         border-radius: 15px
       }
-
       .hero h1 {
         font-size: 42px;
         letter-spacing: -1.4px
       }
-
       .hero .intro {
         font-size: 14px
       }
-
       .hero-footer {
         margin-top: 30px
       }
-
       .hero-footer strong {
         font-size: 11px
       }
-
       .hero-footer small {
         font-size: 9px
       }
-
       .hero-index {
         font-size: 37px
       }
-
       .context-strip {
         gap: 13px
       }
-
       .context-strip>div {
         padding: 0 0 0 13px
       }
-
       .context-strip span {
         font-size: 8px;
         letter-spacing: .6px
       }
-
       .context-strip strong {
         font-size: 11px;
         line-height: 1.5;
         display: block
       }
-
       section {
         padding: 33px 0;
         scroll-margin-top: 85px
       }
-
       .section-head {
         gap: 11px;
         margin-bottom: 19px
       }
-
       h2 {
         font-size: 29px
       }
-
       .lead {
         font-size: 17px
       }
-
       .problem-list,
       .scope,
       .audience,
@@ -1033,109 +865,86 @@
       .revenue {
         grid-template-columns: 1fr
       }
-
       .problem-list {
         gap: 19px;
         margin-top: 23px
       }
-
       .problem-item {
         padding-top: 12px
       }
-
       .problem-item h3 {
         margin: 5px 0
       }
-
       .team-layout {
         gap: 23px
       }
-
       .role-list {
         display: block
       }
-
       .role-list li:nth-child(2) {
         padding-top: 12px
       }
-
       .team-member {
         padding: 17px
       }
-
       .portrait {
         width: 60px;
         height: 76px
       }
-
       .value {
         font-size: 15px;
         padding: 18px
       }
-
       .scope-block {
         padding: 20px
       }
-
       .method {
         gap: 13px
       }
-
       .method p {
         font-size: 11px
       }
-
       .table-wrap {
         border-radius: 8px
       }
-
       td:first-child {
         min-width: 130px
       }
-
       td,
       th {
         padding: 13px
       }
-
       .costs {
         gap: 20px
       }
-
       .costs>div {
         border: 0;
         border-top: 1px solid var(--line);
         padding: 16px 0 0
       }
-
       .costs>div:first-child {
         border: 0;
         padding: 0
       }
-
       footer {
         flex-direction: column;
         gap: 6px
       }
     }
-
     @media(prefers-reduced-motion:reduce) {
       html {
         scroll-behavior: auto
       }
-
       * {
         transition: none !important
       }
     }
-
     @media print {
       body {
         background: white;
         font-size: 10pt;
         color: #17251d
       }
-
       .rail,
       .mobile-header,
       .page-top,
@@ -1143,83 +952,142 @@
       footer a {
         display: none
       }
-
       main {
         margin: 0;
         padding: 0;
         max-width: none
       }
-
       .hero {
         background: #eef1e5 !important;
         color: #17251d;
         padding: 22px;
         border: 1px solid #cbd3c2
       }
-
       .hero .eyebrow,
       .hero .intro,
       .hero-footer small,
       .hero-index {
         color: #263f2f
       }
-
       .hero h1 {
         font-size: 32pt
       }
-
       .hero-footer {
         margin-top: 18px;
         border-color: #cbd3c2
       }
-
       section {
         padding: 22px 0;
         break-inside: auto
       }
-
       h2,
       h3,
       .section-head {
         break-after: avoid
       }
-
       .team-member,
       .scope-block,
       .note {
         break-inside: avoid
       }
-
       .table-wrap {
         overflow: visible
       }
-
       th,
       td {
         padding: 8px
       }
-
       a {
         text-decoration: none
       }
-
       .source-list a {
         text-decoration: underline
       }
-
       .context-strip {
         padding: 15px 0
       }
     }
+  
+    /* START M2 CSS */
+/* M2 additions. Existing M1 styles remain unchanged. */
+.m2-section { max-width: 1200px; }
+.m2-section > p, .m2-section > .m2-subsection > p { max-width: 900px; }
+.m2-section .section-head { align-items: flex-start; }
+.m2-section .section-number { margin-top: 3px; }
+.m2-section h3 { margin-bottom: 10px; }
+.m2-section p, .m2-section li { font-size: 14px; }
+.m2-section .lead { font-size: 19px; }
+.m2-section .small, .m2-section .small p { font-size: 12px; }
+.m2-section .m2-subsection { margin-top: 28px; }
+.m2-section .table-wrap { margin: 18px 0; }
+.m2-section table { font-size: 12px; }
+.m2-section td:first-child { min-width: 135px; width: auto; }
+.m2-section th { letter-spacing: .6px; }
+.m2-section caption { padding: 12px 16px; text-align: left; font-weight: 650; background: var(--soft); }
+.m2-section .m2-wide-table { min-width: 670px; }
+.m2-section .m2-detail { padding: 16px 19px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); margin-top: 16px; }
+.m2-section .m2-detail > summary { font-size: 13px; }
+.m2-section .m2-detail[open] > summary { margin-bottom: 18px; }
+.m2-section .m2-detail li + li { margin-top: 12px; }
+.m2-section .m2-detail ol { padding-left: 23px; }
+.m2-section .m2-detail .table-wrap { background: var(--paper); }
+.m2-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 23px; }
+.m2-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 23px; background: var(--white); min-width: 0; }
+.m2-card p + p { margin-top: 10px; }
+.m2-card .m2-stat { font: 400 clamp(29px, 3vw, 42px)/1.15 Georgia, serif; display: block; margin-bottom: 10px; color: var(--green); }
+.m2-card .m2-stat small { font: 500 13px/1.4 ui-sans-serif, system-ui, sans-serif; }
+.m2-card .m2-caption { font-size: 12px; color: var(--muted); margin-top: 10px; }
+.m2-card .m2-card-label { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.m2-grid.m2-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.m2-callout { margin: 23px 0; padding: 20px 23px; border-left: 3px solid var(--green); background: var(--soft); }
+.m2-callout p { font-size: 14px; }
+.m2-caution { border-left-color: #956b38; background: #f0e8d7; }
+.m2-section blockquote { margin: 17px 0; padding-left: 17px; border-left: 2px solid #829c66; }
+.m2-section blockquote p { font-size: 14px; font-family: Georgia, serif; }
+.m2-section blockquote footer { display: block; padding: 8px 0 0; font: 11px/1.5 ui-sans-serif, system-ui, sans-serif; }
+.m2-status { display: inline-block; padding: 4px 9px; border-radius: 4px; background: var(--soft); color: var(--green); font-size: 10px; font-weight: 700; line-height: 1.5; margin-bottom: 9px; }
+.m2-status.pending { background: #f0e8d7; color: #704819; }
+.m2-interview { border-style: dashed; background: transparent; }
+.m2-interview dl { margin: 17px 0 0; font-size: 12px; }
+.m2-interview dt { font-weight: 650; margin-top: 12px; }
+.m2-interview dd { margin: 3px 0 0; color: var(--muted); }
+.m2-interview audio { width: 100%; margin-top: 15px; }
+.m2-section .m2-links { display: flex; flex-wrap: wrap; gap: 9px 20px; padding: 0; list-style: none; margin: 16px 0 0; }
+.m2-section .m2-links li { font-size: 12px; }
+.m2-section .m2-steps { padding-left: 23px; margin: 17px 0; }
+.m2-section .m2-steps li { padding: 6px 0 6px 5px; }
+.m2-section .m2-evidence-list { padding-left: 21px; }
+.m2-section .m2-evidence-list li { margin: 10px 0; }
+#m2 { margin-top: 24px; }
+#m2 h2 { font: 400 clamp(38px, 4vw, 60px)/1.08 Georgia, serif; letter-spacing: -1.8px; margin-top: 24px; max-width: 780px; }
+#m2 .intro { max-width: 760px; }
+#m2 a { color: var(--accent); }
+.m2-section code { overflow-wrap: anywhere; }
+@media (max-width: 1100px) {
+  .m2-grid { grid-template-columns: 1fr; }
+  .m2-grid.m2-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .m2-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .m2-metrics .m2-card { padding: 18px; }
+}
+@media (max-width: 760px) {
+  .m2-section { scroll-margin-top: 82px; }
+  .m2-grid, .m2-grid.m2-two, .m2-metrics { grid-template-columns: 1fr; }
+  .m2-section .m2-detail { padding: 15px; }
+  .m2-section .m2-card { padding: 20px; }
+  .mobile-menu nav { max-height: calc(100dvh - 70px); overflow-y: auto; }
+  #m2 h2 { font-size: 38px; letter-spacing: -1px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    /* END M2 CSS */
   </style>
 </head>
-
 <body>
   <a href="#main" class="skip">Skip to content</a>
   <aside class="rail" aria-label="Project navigation">
     <p class="rail-label">On this page</p>
     <nav class="nav" aria-label="Project milestones">
-      <details class="nav-group" open>
+      <details class="nav-group">
         <summary><span>M1</span> Project description</summary>
         <div class="nav-children">
           <a href="#overview"><span>01</span> Project overview</a>
@@ -1234,18 +1102,24 @@
           <a href="#revenue"><span>10</span> Revenue streams</a>
         </div>
       </details>
-      <details class="nav-group">
-        <summary><span>M2</span> Validation idea</summary>
-        <div class="nav-children">
-          <a href="#m2"><span>01</span> Validation idea</a>
-        </div>
-      </details>
+      <details class="nav-group" open>
+  <summary><span>M2</span> Validation 1</summary>
+  <div class="nav-children">
+    <a href="#m2"><span>00</span> M2 overview</a>
+    <a href="#m2-starting-point"><span>01</span> Problem &amp; initial solution</a>
+    <a href="#m2-process"><span>02</span> Discovery process</a>
+    <a href="#m2-questionnaire"><span>03</span> Questionnaire</a>
+    <a href="#m2-findings"><span>04</span> Findings &amp; segments</a>
+    <a href="#m2-interviews"><span>05</span> Interviews</a>
+    <a href="#m2-decisions"><span>06</span> Product decisions</a>
+    <a href="#m2-validation"><span>07</span> Validation &amp; next test</a>
+  </div>
+</details>
     </nav>
     <div class="rail-bottom">
-      <span class="status-dot" aria-hidden="true"></span>Updated 18 October 2026
+      <span class="status-dot" aria-hidden="true"></span>Updated 01 November 2026
     </div>
   </aside>
-
   <header class="mobile-header">
     <a class="brand" href="#overview">
       <span class="brand-mark" aria-hidden="true">sfa.</span>
@@ -1254,7 +1128,7 @@
     <details class="mobile-menu">
       <summary>Contents +</summary>
       <nav class="nav" aria-label="Project milestones">
-        <details class="nav-group" open>
+        <details class="nav-group">
           <summary><span>M1</span> Project description</summary>
           <div class="nav-children">
             <a href="#overview"><span>01</span> Project overview</a>
@@ -1269,21 +1143,26 @@
             <a href="#revenue"><span>10</span> Revenue streams</a>
           </div>
         </details>
-        <details class="nav-group">
-          <summary><span>M2</span> Validation 1 (idea)</summary>
-          <div class="nav-children">
-            <a href="#m2"><span>01</span> Validation 1 (idea)</a>
-          </div>
-        </details>
+        <details class="nav-group" open>
+  <summary><span>M2</span> Validation 1</summary>
+  <div class="nav-children">
+    <a href="#m2"><span>00</span> M2 overview</a>
+    <a href="#m2-starting-point"><span>01</span> Problem &amp; initial solution</a>
+    <a href="#m2-process"><span>02</span> Discovery process</a>
+    <a href="#m2-questionnaire"><span>03</span> Questionnaire</a>
+    <a href="#m2-findings"><span>04</span> Findings &amp; segments</a>
+    <a href="#m2-interviews"><span>05</span> Interviews</a>
+    <a href="#m2-decisions"><span>06</span> Product decisions</a>
+    <a href="#m2-validation"><span>07</span> Validation &amp; next test</a>
+  </div>
+</details>
       </nav>
     </details>
   </header>
-
   <main id="main">
     <div class="page-top">
       <span class="crumb">Project documentation</span>
     </div>
-
     <div class="hero" id="overview">
       <p class="eyebrow">M1 / Project description</p>
       <h1>Smart Finance Advisor</h1>
@@ -1296,7 +1175,6 @@
         <span class="hero-index" aria-hidden="true">M1</span>
       </div>
     </div>
-
     <section id="team" aria-labelledby="team-title">
       <div class="section-head"><span class="section-number" aria-hidden="true">02</span>
         <h2 id="team-title">Team and roles</h2>
@@ -1321,7 +1199,6 @@
               <p class="muted">Contact: cristianbraniste964@gmail.com</p>
             </div>
           </article>
-
           <article class="team-member">
             <div class="portrait">
               <img src="images/Adi.png" alt="Adrian Rîpeanu">
@@ -1336,7 +1213,6 @@
               <p class="muted">Contact: adrian.ripeanu10@gmail.com</p>
             </div>
           </article>
-
           <article class="team-member">
             <div class="portrait">
               <img src="images/Vlad.jpeg" alt="Vlad Gheorghiță">
@@ -1352,7 +1228,6 @@
               <p class="muted">Contact: gheorghitavladgabriel@gmail.com</p>
             </div>
           </article>
-
           <article class="team-member">
             <div class="portrait">
               <img src="images/Andrei.jpeg" alt="Andrei Costache">
@@ -1381,7 +1256,6 @@
         </ul>
       </div>
     </section>
-
     <section id="problem" aria-labelledby="problem-title">
       <div class="section-head"><span class="section-number" aria-hidden="true">03</span>
         <h2 id="problem-title">Problem</h2>
@@ -1403,7 +1277,6 @@
         </div>
       </div>
     </section>
-
     <section id="solution" aria-labelledby="solution-title">
       <div class="section-head"><span class="section-number" aria-hidden="true">04</span>
         <h2 id="solution-title">Solution and value proposition</h2>
@@ -1425,7 +1298,6 @@
             <li>Basic financial insights and recommendations</li>
           </ul>
         </div>
-
         <div class="scope-block">
           <span class="tag planned">Planned development</span>
           <h3>Future enhancements</h3>
@@ -1442,7 +1314,6 @@
         check bank coverage and costs, explain what data is shared, and implement access revocation and
         deletion. We also want to limit the information sent to external AI services.</p>
     </section>
-
     <section id="customers" aria-labelledby="customers-title">
       <div class="section-head"><span class="section-number" aria-hidden="true">05</span>
         <h2 id="customers-title">Customer segments</h2>
@@ -1463,7 +1334,6 @@
         </div>
       </div>
     </section>
-
     <section id="competition" aria-labelledby="competition-title">
       <div class="section-head"><span class="section-number" aria-hidden="true">06</span>
         <h2 id="competition-title">Competition</h2>
@@ -1508,7 +1378,6 @@
         </table>
       </div>
     </section>
-
     <section id="advantage" aria-labelledby="advantage-title">
       <div class="section-head"><span class="section-number" aria-hidden="true">07</span>
         <h2 id="advantage-title">Proposed competitive advantage</h2>
@@ -1536,7 +1405,6 @@
       <div class="note">We need to find out whether this is more useful than the tools people already use. Competitors
         also offer bank connections and AI features, so those alone are not enough to set SFA apart.</div>
     </section>
-
     <section id="metrics" aria-labelledby="metrics-title">
       <div class="section-head"><span class="section-number" aria-hidden="true">08</span>
         <h2 id="metrics-title">Key metrics</h2>
@@ -1585,7 +1453,6 @@
       </div>
       <p class="metric-note">We will use the first pilot results to set realistic targets.</p>
     </section>
-
     <section id="costs" aria-labelledby="costs-title">
       <div class="section-head"><span class="section-number" aria-hidden="true">09</span>
         <h2 id="costs-title">Cost structure</h2>
@@ -1611,7 +1478,6 @@
       <p class="small muted" style="margin-top:23px">We will estimate monthly costs once we know the provider’s terms
         and expected usage. Development time also counts as a project cost.</p>
     </section>
-
     <section id="revenue" aria-labelledby="revenue-title">
       <div class="section-head"><span class="section-number" aria-hidden="true">10</span>
         <h2 id="revenue-title">Revenue streams</h2>
@@ -1633,18 +1499,255 @@
       <div class="note"> Users can try the Premium AI features for one week. After the trial, they can subscribe for
         19.99 RON per month or continue using the free account management features.</div>
     </section>
+    <!-- START M2: replace the original M2 hero with this entire block. -->
+<section class="hero" id="m2" aria-labelledby="m2-title">
+  <p class="eyebrow">M2 / Validation 1</p>
+  <h2 id="m2-title">From multiple accounts<br>to a problem worth solving.</h2>
+  <p class="intro">Our research points to a narrower opportunity: helping people who already track spending keep a correct, understandable total with less recurring work. It also shows why many people may prefer their current spreadsheet or banking app.</p>
+  <div class="hero-footer">
+    <div><strong>Customer Discovery</strong><small>Milestone 2 · 02 November 2026</small></div>
+    <span class="hero-index" aria-hidden="true">M2</span>
+  </div>
+</section>
 
-    <section class="hero" id="m2" aria-labelledby="m2-title">
-      <p class="eyebrow">M2 / Validation idea</p>
-      <h1>Validation idea</h1>
-      <p class="intro">We will test whether the problem is real and whether users see value in a unified
-        personal-finance dashboard across multiple accounts that offers personal financial insights.</p>
-      <div class="hero-footer">
-        <div><strong>Validation idea</strong><small>Milestone 2 · 02 November 2026</small>
-        </div>
-        <span class="hero-index" aria-hidden="true">M2</span>
-      </div>
-    </section>
+<section class="m2-section" id="m2-starting-point" aria-labelledby="m2-starting-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">01</span><h2 id="m2-starting-title">Problem identification &amp; initial solution</h2></div>
+  <p class="lead">Our starting hypothesis was that using several financial accounts makes it harder to understand personal spending.</p>
+  <p>M1 framed the problem around fragmented information, manual consolidation and the difficulty of turning transaction history into useful decisions. This was a product hypothesis, not an established fact about everyone with several accounts. We used discovery to investigate when people actually need a total, how they obtain it and whether the effort matters to them.</p>
+  <div class="m2-callout"><p><strong>Question guiding discovery:</strong> when does an existing method fail to provide a useful answer, or require enough unwanted work that someone would change it?</p></div>
+</section>
+
+<section class="m2-section" id="m2-process" aria-labelledby="m2-process-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">02</span><h2 id="m2-process-title">Customer discovery plan &amp; process</h2></div>
+  <p>Our approach is to study recent behaviour before asking people to evaluate SFA: identify an actual spending question, reconstruct the current workflow, understand its consequences, and only then compare a solution on the same task.</p>
+  <ol class="m2-steps">
+    <li><strong>Explore current behaviour.</strong> An online questionnaire asks about the previous 30 days, the most recent attempt to calculate spending, tools, time, difficulty and account connections. Open questions also ask what worked well.</li>
+    <li><strong>Look for different behaviours.</strong> Cross-tabulate account count with checking frequency, method, time, difficulty and connection experience. Read free-text answers for both friction and successful alternatives.</li>
+    <li><strong>Investigate a narrower segment.</strong> Document individual interviews and observe the current workflow before showing SFA. Then test the MVP, correct totals and repeat use. These next activities are described below as planned work and are not done yet.</li>
+  </ol>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Discovery activities and evidence status">
+    <table><thead><tr><th scope="col">Activity</th><th scope="col">What is documented</th><th scope="col">Evidence / limitation</th></tr></thead><tbody>
+      <tr><td>Online questionnaire<br>23–30 Oct 2026</td><td>102 submissions in the analysis snapshot.</td><td><a href="https://docs.google.com/forms/d/1StgzXGWEYm6f8ID1cFT_-Qr6FOql1u3mwrlPf0fMlDI/viewanalytics">Questions and aggregate results</a> · <a href="assets/m2/questionnaire-responses-anonymised.xlsx" download>De-identified questionnaire responses (.xlsx)</a></td></tr>
+      <tr><td>Online comments</td><td>The supplied comment file contains Reddit, Facebook-style and unattributed passages.</td><td>Authors may overlap with the survey.</td></tr>
+      <tr><td>Interviews</td><td>Five interview records are reserved below.</td><td>Each interview reflects the participant’s personal experience and may not represent others.</td></tr>
+    </tbody></table>
+  </div>
+  <p class="small muted">The initial audience in M1 was adults in Romania using several accounts, with students and early-career workers considered for recruitment. The survey does not establish an income, occupation or age profile beyond the eligibility confirmation. We therefore refine the segment by behaviour rather than inventing a demographic persona.</p>
+</section>
+
+<section class="m2-section" id="m2-questionnaire" aria-labelledby="m2-questionnaire-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">03</span><h2 id="m2-questionnaire-title">Questionnaire &amp; analysis rules</h2></div>
+  <p>The questionnaire focuses on what respondents did, rather than whether they like the idea of an AI finance app. It asks about successful workflows as well as difficulties.</p>
+  <details class="m2-detail"><summary>Read all 13 questions — original Romanian wording</summary>
+    <ol lang="ro"><li>Confirmi că ai cel puțin 18 ani, locuiești în România și ești de acord să participi în condițiile descrise mai sus?</li>
+<li>La câte bănci sau servicii financiare, precum Revolut, ai folosit efectiv conturi personale în ultimele 30 de zile?</li>
+<li>Pentru ce folosești conturile respective?<br>Poți da unul-două exemple: un cont pentru salariu, altul pentru cumpărături sau economii. Poți menționa banca ori aplicația, fără numere de cont sau sume.</li>
+<li>În ultimele 30 de zile, de câte ori ai încercat să afli cât ai cheltuit în total într-o anumită perioadă?<br>De exemplu, totalul unei săptămâni sau al unei luni.</li>
+<li>Ce te-a făcut să verifici atunci?<br>Un exemplu în una-două propoziții este suficient.</li>
+<li>Cum ai încercat să afli totalul?<br>Bifează metodele folosite în acea situație.</li>
+<li>Aproximativ cât timp ai petrecut cu verificarea, incluzând adunarea informațiilor?</li>
+<li>Cât de ușor sau dificil a fost să obții informația de care aveai nevoie?</li>
+<li>Ce a funcționat bine sau te-a încurcat în acea situație?<br>Dacă a existat o dificultate, poți spune și ce ai făcut mai departe sau ce consecință a avut. Dacă totul a mers bine, spune ce ți-a fost util.</li>
+<li>Ce aplicații, tabele sau alte metode ai încercat până acum pentru a-ți urmări banii?<br>Menționează, dacă îți amintești, numele lor și de ce le-ai păstrat sau ai renunțat. Dacă folosești doar aplicația băncii ori nu urmărești cheltuielile separat, poți spune asta.</li>
+<li>Ai conectat vreodată un cont bancar la o aplicație din afara băncii, pentru ca ea să îți afișeze soldul sau tranzacțiile?<br>Ne referim la accesul la datele contului, nu la adăugarea cardului într-un portofel digital sau la plata unei cumpărături.</li>
+<li>Dacă ai luat în calcul conectarea unui cont la o astfel de aplicație, ce a contat în decizia ta?</li>
+<li>În ultimele trei luni, ai avut vreo întrebare despre cheltuielile tale la care metodele folosite nu te-au ajutat să răspunzi?<br>Dacă da, povestește pe scurt situația și ce ai încercat. Dacă nu, poți scrie «nu».</li></ol>
+    
+  </details>
+  <details class="m2-detail"><summary>How counts, denominators and qualitative themes were calculated</summary>
+    <ul>
+      <li><strong>Frozen comparison base:</strong> R001–R102, the first 102 submissions. IDs refer to submissions, not independently verified unique identities.</li>
+      <li><strong>Recent checks:</strong> 83/102 (81.4%) report at least one attempt in 30 days. We exclude 16 “never” and 3 “do not remember” answers from recent-task measures, while retaining their comments as qualitative material.</li>
+      <li><strong>Main behavioural subset:</strong> 73 respondents both used two or more banks/services and reported a recent attempt. A question about a total does <em>not</em> establish that all their accounts were included.</li>
+      <li><strong>Time:</strong> self-reported intervals include information gathering for that check. They do not separately measure earlier setup or ongoing data entry. We do not turn these intervals into a precise average.</li>
+      <li><strong>Methods:</strong> multiple selections can overlap. We count each full option once and do not split the answer at every comma or infer missing selections from later comments.</li>
+      <li><strong>Themes:</strong> each submission is counted once per theme across free-text answers. Themes can overlap and include past experiences. A mention is not proof of a current unmet need.</li>
+      <li><strong>Inconsistencies:</strong> R006 reports zero services but describes Revolut; R060 reports one but names two. We preserve the original choices. Comparison with the previous analysis found no quantitative changes in the first 102 rows; four “NA” text values had previously appeared as blanks.</li>
+    </ul>
+  </details>
+</section>
+
+<section class="m2-section" id="m2-findings" aria-labelledby="m2-findings-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">04</span><h2 id="m2-findings-title">What the questionnaire actually shows</h2></div>
+  <p class="lead">Several accounts are common in this sample. A difficult or unwanted workflow is much less universal.</p>
+  <div class="m2-grid m2-metrics">
+    <div class="m2-card"><span class="m2-stat">86.3% <small>88 / 102</small></span><h3>Use 2+ banks or services</h3><p class="m2-caption">Use during the previous 30 days. This does not measure attempts to consolidate every account.</p></div>
+    <div class="m2-card"><span class="m2-stat">45.2% <small>33 / 73</small></span><h3>Spent at least 6 minutes</h3><p class="m2-caption">Among multi-service respondents with a recent spending-total attempt.</p></div>
+    <div class="m2-card"><span class="m2-stat">69.9% <small>51 / 73</small></span><h3>Found that check easy</h3><p class="m2-caption">The same 73-person subset. Longer checks can still be easy or useful.</p></div>
+  </div>
+  <p style="margin-top:23px">Of the 88 multi-service respondents, <strong>73/88 (83.0%)</strong> tried to obtain a spending total. Among those 73, <strong>62/73 (84.9%)</strong> tried at least twice; <strong>40/73 (54.8%)</strong> spent at most five minutes, and only <strong>6/73 (8.2%)</strong> rated the check difficult. The remaining <strong>16/73 (21.9%)</strong> were neutral.</p>
+  <div class="m2-callout m2-caution"><p><strong>A recruitment pool, not validated demand:</strong> 28/62 (45.2%) of the repeated checkers spent at least six minutes. Yet 14/28 (50.0%) of this group found the task easy. They are candidates for follow-up, not 28 proven dissatisfied customers.</p></div>
+  <details class="m2-detail"><summary>Cross-tabs: number of banks × frequency, time, difficulty, method and connections</summary>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Bank count and recent-check measures"><table class="m2-wide-table"><caption>Bank count and recent-check measures</caption><thead><tr><th scope="col">Banks/services</th><th scope="col">N</th><th scope="col">Any recent attempt</th><th scope="col">2+ attempts</th><th scope="col">6+ min / recent</th><th scope="col">Easy / recent</th></tr></thead><tbody><tr><td>Zero*</td><td>1</td><td>1/1 (100.0%)</td><td>1/1 (100.0%)</td><td>0/1 (0.0%)</td><td>1/1 (100.0%)</td></tr><tr><td>One</td><td>13</td><td>9/13 (69.2%)</td><td>8/13 (61.5%)</td><td>2/9 (22.2%)</td><td>8/9 (88.9%)</td></tr><tr><td>Two</td><td>44</td><td>37/44 (84.1%)</td><td>29/44 (65.9%)</td><td>15/37 (40.5%)</td><td>24/37 (64.9%)</td></tr><tr><td>Three</td><td>32</td><td>26/32 (81.2%)</td><td>25/32 (78.1%)</td><td>15/26 (57.7%)</td><td>17/26 (65.4%)</td></tr><tr><td>Four or more</td><td>12</td><td>10/12 (83.3%)</td><td>8/12 (66.7%)</td><td>3/10 (30.0%)</td><td>10/10 (100.0%)</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Bank count × checking frequency; percentages use each full bank-count group"><table class="m2-wide-table"><caption>Bank count × checking frequency; percentages use each full bank-count group</caption><thead><tr><th scope="col">Banks/services</th><th scope="col">N</th><th scope="col">Never</th><th scope="col">Once</th><th scope="col">2–3 times</th><th scope="col">4+ times</th><th scope="col">Do not remember</th></tr></thead><tbody><tr><td>Zero*</td><td>1</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td><td>1/1 (100.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td></tr><tr><td>One</td><td>13</td><td>3/13 (23.1%)</td><td>1/13 (7.7%)</td><td>6/13 (46.2%)</td><td>2/13 (15.4%)</td><td>1/13 (7.7%)</td></tr><tr><td>Two</td><td>44</td><td>6/44 (13.6%)</td><td>8/44 (18.2%)</td><td>15/44 (34.1%)</td><td>14/44 (31.8%)</td><td>1/44 (2.3%)</td></tr><tr><td>Three</td><td>32</td><td>5/32 (15.6%)</td><td>1/32 (3.1%)</td><td>14/32 (43.8%)</td><td>11/32 (34.4%)</td><td>1/32 (3.1%)</td></tr><tr><td>Four or more</td><td>12</td><td>2/12 (16.7%)</td><td>2/12 (16.7%)</td><td>0/12 (0.0%)</td><td>8/12 (66.7%)</td><td>0/12 (0.0%)</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Bank count × time; percentages use recent checkers within each group"><table class="m2-wide-table"><caption>Bank count × time; percentages use recent checkers within each group</caption><thead><tr><th scope="col">Banks/services</th><th scope="col">Recent N</th><th scope="col">Under 2 minutes</th><th scope="col">2–5 minutes</th><th scope="col">6–15 minutes</th><th scope="col">16–30 minutes</th><th scope="col">Over 30 minutes</th></tr></thead><tbody><tr><td>Zero*</td><td>1</td><td>1/1 (100.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td></tr><tr><td>One</td><td>9</td><td>2/9 (22.2%)</td><td>5/9 (55.6%)</td><td>0/9 (0.0%)</td><td>2/9 (22.2%)</td><td>0/9 (0.0%)</td></tr><tr><td>Two</td><td>37</td><td>16/37 (43.2%)</td><td>6/37 (16.2%)</td><td>9/37 (24.3%)</td><td>5/37 (13.5%)</td><td>1/37 (2.7%)</td></tr><tr><td>Three</td><td>26</td><td>4/26 (15.4%)</td><td>7/26 (26.9%)</td><td>10/26 (38.5%)</td><td>2/26 (7.7%)</td><td>3/26 (11.5%)</td></tr><tr><td>Four or more</td><td>10</td><td>2/10 (20.0%)</td><td>5/10 (50.0%)</td><td>1/10 (10.0%)</td><td>2/10 (20.0%)</td><td>0/10 (0.0%)</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Bank count × difficulty; percentages use recent checkers within each group"><table class="m2-wide-table"><caption>Bank count × difficulty; percentages use recent checkers within each group</caption><thead><tr><th scope="col">Banks/services</th><th scope="col">Recent N</th><th scope="col">Very easy</th><th scope="col">Fairly easy</th><th scope="col">Neither easy nor difficult</th><th scope="col">Fairly difficult</th><th scope="col">Very difficult</th></tr></thead><tbody><tr><td>Zero*</td><td>1</td><td>0/1 (0.0%)</td><td>1/1 (100.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td></tr><tr><td>One</td><td>9</td><td>5/9 (55.6%)</td><td>3/9 (33.3%)</td><td>1/9 (11.1%)</td><td>0/9 (0.0%)</td><td>0/9 (0.0%)</td></tr><tr><td>Two</td><td>37</td><td>14/37 (37.8%)</td><td>10/37 (27.0%)</td><td>10/37 (27.0%)</td><td>3/37 (8.1%)</td><td>0/37 (0.0%)</td></tr><tr><td>Three</td><td>26</td><td>8/26 (30.8%)</td><td>9/26 (34.6%)</td><td>6/26 (23.1%)</td><td>2/26 (7.7%)</td><td>1/26 (3.8%)</td></tr><tr><td>Four or more</td><td>10</td><td>8/10 (80.0%)</td><td>2/10 (20.0%)</td><td>0/10 (0.0%)</td><td>0/10 (0.0%)</td><td>0/10 (0.0%)</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Bank count × methods; selections overlap"><table class="m2-wide-table"><caption>Bank count × methods; selections overlap</caption><thead><tr><th scope="col">Banks/services</th><th scope="col">Recent N</th><th scope="col">One bank app</th><th scope="col">Several bank apps</th><th scope="col">Excel / Sheets / another table</th><th scope="col">Separate tracking app</th><th scope="col">Adding statements, receipts or notes</th><th scope="col">Memory / balances estimate</th></tr></thead><tbody><tr><td>Zero*</td><td>1</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td></tr><tr><td>One</td><td>9</td><td>5/9 (55.6%)</td><td>0/9 (0.0%)</td><td>1/9 (11.1%)</td><td>2/9 (22.2%)</td><td>1/9 (11.1%)</td><td>1/9 (11.1%)</td></tr><tr><td>Two</td><td>37</td><td>20/37 (54.1%)</td><td>6/37 (16.2%)</td><td>13/37 (35.1%)</td><td>4/37 (10.8%)</td><td>9/37 (24.3%)</td><td>10/37 (27.0%)</td></tr><tr><td>Three</td><td>26</td><td>7/26 (26.9%)</td><td>10/26 (38.5%)</td><td>11/26 (42.3%)</td><td>7/26 (26.9%)</td><td>4/26 (15.4%)</td><td>3/26 (11.5%)</td></tr><tr><td>Four or more</td><td>10</td><td>1/10 (10.0%)</td><td>5/10 (50.0%)</td><td>2/10 (20.0%)</td><td>5/10 (50.0%)</td><td>3/10 (30.0%)</td><td>1/10 (10.0%)</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Methods among 73 recent multi-service checkers"><table class="m2-wide-table"><caption>Methods among 73 recent multi-service checkers</caption><thead><tr><th scope="col">Method</th><th scope="col">Selected / 73</th><th scope="col">6+ min within method</th><th scope="col">Easy within method</th></tr></thead><tbody><tr><td>One bank app</td><td>28/73 (38.4%)</td><td>10/28 (35.7%)</td><td>19/28 (67.9%)</td></tr><tr><td>Several bank apps</td><td>21/73 (28.8%)</td><td>11/21 (52.4%)</td><td>15/21 (71.4%)</td></tr><tr><td>Excel / Sheets / another table</td><td>26/73 (35.6%)</td><td>17/26 (65.4%)</td><td>17/26 (65.4%)</td></tr><tr><td>Separate tracking app</td><td>16/73 (21.9%)</td><td>9/16 (56.2%)</td><td>13/16 (81.2%)</td></tr><tr><td>Adding statements, receipts or notes</td><td>16/73 (21.9%)</td><td>13/16 (81.2%)</td><td>7/16 (43.8%)</td></tr><tr><td>Memory / balances estimate</td><td>14/73 (19.2%)</td><td>7/14 (50.0%)</td><td>4/14 (28.6%)</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Bank count × account-connection experience"><table class="m2-wide-table"><caption>Bank count × account-connection experience</caption><thead><tr><th scope="col">Banks/services</th><th scope="col">N</th><th scope="col">Never tried</th><th scope="col">Use now</th><th scope="col">Used previously</th><th scope="col">Started, did not finish</th></tr></thead><tbody><tr><td>Zero*</td><td>1</td><td>1/1 (100.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td><td>0/1 (0.0%)</td></tr><tr><td>One</td><td>13</td><td>11/13 (84.6%)</td><td>2/13 (15.4%)</td><td>0/13 (0.0%)</td><td>0/13 (0.0%)</td></tr><tr><td>Two</td><td>44</td><td>40/44 (90.9%)</td><td>1/44 (2.3%)</td><td>3/44 (6.8%)</td><td>0/44 (0.0%)</td></tr><tr><td>Three</td><td>32</td><td>26/32 (81.2%)</td><td>2/32 (6.2%)</td><td>3/32 (9.4%)</td><td>1/32 (3.1%)</td></tr><tr><td>Four or more</td><td>12</td><td>7/12 (58.3%)</td><td>1/12 (8.3%)</td><td>3/12 (25.0%)</td><td>1/12 (8.3%)</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Connection experience among recent multi-service checkers"><table class="m2-wide-table"><caption>Connection experience among recent multi-service checkers</caption><thead><tr><th scope="col">Connection experience</th><th scope="col">N / 73</th><th scope="col">6+ min within group</th><th scope="col">Easy within group</th></tr></thead><tbody><tr><td>Never tried</td><td>59/73 (80.8%)</td><td>25/59 (42.4%)</td><td>39/59 (66.1%)</td></tr><tr><td>Use now</td><td>4/73 (5.5%)</td><td>3/4 (75.0%)</td><td>4/4 (100.0%)</td></tr><tr><td>Used previously</td><td>8/73 (11.0%)</td><td>3/8 (37.5%)</td><td>6/8 (75.0%)</td></tr><tr><td>Started, did not finish</td><td>2/73 (2.7%)</td><td>2/2 (100.0%)</td><td>2/2 (100.0%)</td></tr></tbody></table></div>
+  </details>
+  <details class="m2-detail"><summary>Other findings: connections, unanswered questions and the extra response</summary>
+    <p><strong>External account connections:</strong> 85/102 (83.3%) have not tried; 6/102 (5.9%) currently use one; 9/102 (8.8%) used one previously; 2/102 (2.0%) stopped before completion. These groups do not form a churn cohort. Among the 73 recent multi-service checkers, just 4 currently connect accounts; two describe PFA/company accounting, so this cannot validate a personal open-banking workflow.</p>
+    <p><strong>Unanswered spending questions:</strong> 66/102 (64.7%) explicitly answer “no”, 25/102 (24.5%) leave the final question blank, 1/102 (1.0%) supplies a dash and 10/102 (9.8%) describe a situation or wish. These ten include needs beyond SFA’s current scope. “No” also does not erase friction described elsewhere: R053 reports abandoning a laborious spreadsheet and still answers “no”.</p>
+    <p><strong>Abandonment:</strong> six submissions explicitly describe stopping a method. Four mention effort or recording transactions. Other explanations include no perceived improvement in money left over and already staying within budget. Stopping one tool does not demonstrate demand for another.</p>
+  </details>
+
+  <div class="m2-subsection">
+    <h3>Reading a total is different from keeping the data ready</h3>
+    <div class="m2-grid m2-two">
+      <div class="m2-card"><blockquote><p lang="ro">“Îmi e mai dificil sa introduc datele în Excel, e că am multe itemuri dar după e ușor să-l consult”</p><footer>R072 · survey answer · reported check: 2–5 minutes, fairly easy</footer></blockquote><p>The consultation is easy; entering the underlying data is the burden. The questionnaire does not isolate that maintenance time.</p></div>
+      <div class="m2-card"><blockquote><p lang="ro">“Doar excel. Am un template mai complex si imi ofera tot ce vreau.”</p><footer>R019 · survey answer</footer></blockquote><p>A personalised spreadsheet can already be the right solution. R100 also values the awareness gained by recording spending manually.</p></div>
+    </div>
+    <p style="margin-top:18px">R084 reports checking a shared sheet in “2 seconds” once entries are kept consistent. R090 says cleaning imported internal transfers consumed almost as much time as manual entry. A fair comparison must include <strong>setup, collection, entry, corrections, reading and checking the answer</strong>, with one-time and recurring work reported separately.</p>
+  </div>
+
+  <div class="m2-subsection"><h3>Three behaviours, with different reasons to switch</h3>
+    <div class="m2-grid">
+      <div class="m2-card"><p class="m2-card-label">Candidate segment</p><h3>Tracking requires unwanted maintenance</h3><p><strong>Trigger:</strong> a periodic review, too much spent, or a question about subscriptions.</p><p><strong>Workflow:</strong> check several apps, gather transactions and maintain a sheet or tracker. Personal categories and control are useful.</p><p><strong>Observed consequence:</strong> R039 forgot entries; R053 found reconstruction too laborious and abandoned Excel; R072 struggles with entry.</p></div>
+      <div class="m2-card"><p class="m2-card-label">Successful alternative</p><h3>A personal system already works</h3><p><strong>Trigger:</strong> routine budget checks and deliberate financial control.</p><p><strong>Workflow:</strong> an established sheet, template or app. Flexibility, shared access, history and discipline matter.</p><p><strong>Observed result:</strong> R019 has everything needed; R084 checks a shared sheet quickly; R100 values manual attention.</p></div>
+      <div class="m2-card"><p class="m2-card-label">Lower initial priority</p><h3>The bank app or a simple rule is enough</h3><p><strong>Trigger:</strong> salary arrival, curiosity or checking available money.</p><p><strong>Workflow:</strong> consult a balance or chart, pay obligations and allocate the remainder.</p><p><strong>Observed result:</strong> R015 finds the function easily; R043 values existing categories. Other respondents do not need a detailed consolidated report.</p></div>
+    </div>
+  </div>
+  <details class="m2-detail"><summary>Free-text findings: needs, distinct submissions and counterexamples</summary>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Manually coded free-text findings"><table class="m2-wide-table"><caption>Manually coded free-text findings</caption><thead><tr><th scope="col">Theme</th><th scope="col">Distinct submissions</th><th scope="col">Example</th><th scope="col">Counterexample / limit</th></tr></thead><tbody><tr><td>Manual effort, omissions or consistency</td><td>15/102 (14.7%)</td><td>R053 stopped using Excel because tracking became laborious; R072 separates entry effort from easy lookup.</td><td>R080 says Expenses solved the earlier burden; R100 values manual awareness.</td></tr><tr><td>Combining sources in practice</td><td>5/102 (4.9%)</td><td>R031 checks each bank app; R059 cannot include family spending in the bank’s view.</td><td>R026 does not confirm a recent attempt. R065’s prospective coverage concern is excluded from these five.</td></tr><tr><td>Categories and merchant clarity</td><td>5 observed + 3 requirements; 8/102 (7.8%)</td><td>R007 sees the legal merchant name rather than the familiar brand; R011 reports too much “other”.</td><td>R043 and R060 appreciate existing categories. Requirements are not all experienced errors.</td></tr><tr><td>Meaning of the total</td><td>5/102 (4.9%)</td><td>R066 expects refunds to reduce net spending; R090 reports time spent removing own-account transfers.</td><td>Desired definitions differ. R034 and R090 do not confirm a recent check frequency.</td></tr><tr><td>Periods, filtering or historical search</td><td>3/102 (2.9%)</td><td>R094 wants to find older costs and explicitly mentions tags.</td><td>Revolut already documents custom periods. Difficulty finding a feature is not feature absence.</td></tr><tr><td>Holiday total</td><td>2/102 (2.0%)</td><td>R081 asks about holiday and food spending.</td><td>R047 already uses Excel/Notion and reports no unanswered question.</td></tr><tr><td>Future obligations, recurrence or deadlines</td><td>4/102 (3.9%)</td><td>R073 checks whether a purchase entered instalments, after an earlier unexpected full charge.</td><td>Several already have useful tracking; this is not four unmet requests for a forecast.</td></tr><tr><td>Shared / family tracking</td><td>3/102 (2.9%)</td><td>R059 cannot add other family members’ expenses in the bank tool.</td><td>R084 already collaborates efficiently in Sheets.</td></tr><tr><td>Security, trust, reputation or exclusive access</td><td>17/102 (16.7%)</td><td>R059 does not feel comfortable linking a bank; R078 asks for a regulated provider.</td><td>Unexplained refusal is not coded as a security concern. Trust is not the only adoption issue.</td></tr><tr><td>Structural flexibility</td><td>2/102 (2.0%)</td><td>R085 describes recurring-income limitations in an app; R094 describes reporting constraints.</td><td>R085’s own solution now works well. The reported competitor limitation has not been independently reproduced.</td></tr><tr><td>Explicit PFA / own-company context</td><td>2/102 (2.0%)</td><td>R002 mentions a PFA account; R094 mentions company accounting.</td><td>Neither establishes an unmet business need or willingness to pay SFA.</td></tr></tbody></table></div>
+  </details>
+  <div class="m2-subsection"><h3>What SFA would have to do better</h3>
+    <p>We prioritise a practical outcome: <strong>update and verify spending across payment accounts for a chosen period, without counting own-account transfers as consumption and with refunds handled as agreed with the user.</strong> A secondary question is the cost of a holiday or car across categories. Neither is a unique feature claim.</p>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Alternatives for the same spending task"><table><thead><tr><th scope="col">Alternative</th><th scope="col">What already helps</th><th scope="col">What remains to compare in a real task</th></tr></thead><tbody>
+      <tr><td>Excel / Google Sheets</td><td>Flexible formulas, personal rules and context columns. The survey contains successful long-running workflows.</td><td>Full preparation and maintenance effort. SFA must save work while retaining control and useful structure.</td></tr>
+      <tr><td><a href="https://help.revolut.com/ro-RO/help/accounts/budget-and-analytics/how-can-i-see-my-spending-and-income-analytics/">Revolut</a></td><td>Documented spending analytics, custom categories and custom periods; linked-account support is also documented.</td><td>Exact bank eligibility, the combined result, transfers between banks, refunds and the steps needed to find the answer.</td></tr>
+      <tr><td><a href="https://iancuguda.ro/mim/how-to/">Money in Motion</a></td><td>Documented bank import, reports, family use, internal transfers and cost centres, including holiday tracking.</td><td>Correction effort, supported accounts and the result for the participant’s own definition of spending.</td></tr>
+      <tr><td><a href="https://support.budgetbakers.com/hc/en-us/articles/7076564578066-Utilising-Labels">Wallet</a></td><td>Documented bank sync, labels and filtering. Labels already address some context-based tracking needs.</td><td>Platform differences, setup, transfer/refund rules and whether the participant’s question is already answered.</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<section class="m2-section" id="m2-interviews" aria-labelledby="m2-interviews-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">05</span><h2 id="m2-interviews-title">Interviews</h2></div>
+  <p class="intro-note">Five exploratory interviews are summarised below. They add context and counterexamples to the questionnaire; they are individual accounts, not population-level evidence. Participants have given permission for these recordings to be published.</p>
+  <div class="m2-grid"><article class="m2-card m2-interview" aria-labelledby="m2-interview-01-title">
+      <h3 id="m2-interview-01-title">A simple notes-based routine</h3>
+      <p class="m2-caption">28 October 2026 · 08:23</p>
+      <audio controls preload="metadata" aria-label="Interview 01 audio recording"><source src="assets/m2/interview-01.mp4" type="audio/mp4">Your browser does not support embedded audio. <a href="assets/m2/interview-01.mp4" download>Download the recording</a>.</audio>
+      <h4>Current method and recent situation</h4>
+      <p>The participant mainly uses one banking app and occasionally uses Revolut for individual purchases. Every few months, they review larger transactions over roughly three months, often after noticing a lower balance. Reconstructing spending from memory was difficult, so they check transaction history and note amounts on their phone.</p>
+      <h4>What worked and what caused difficulty</h4>
+      <p>Memory alone was insufficient, but the bank history provided the answer. A subscription charge briefly caused uncertainty about its renewal date; checking the payment details resolved it. The participant says the relevant information is only a few clicks away and is satisfied with a simple notes list rather than a detailed spreadsheet. Revolut purchases are infrequent and can be checked separately.</p>
+      <h4>Evidence</h4>
+      <ul><li><strong>03:06–03:20:</strong> difficulty reconstructing past spending from memory.</li><li><strong>03:37–03:45:</strong> “verific istoricul și le menționez în notițe”; confirms using phone notes.</li><li><strong>05:12–06:18:</strong> uncertainty about subscription charges resolved through payment details.</li><li><strong>06:48–06:54:</strong> finding information in the banking history takes only a few clicks.</li></ul>
+      <h4>Effect on the hypothesis</h4>
+      <p><strong>Mixed.</strong> The interview supports a desire to understand past spending, but weakens the assumption that manual tracking is necessarily frustrating. There is no demonstrated major aggregation problem. Clearer visibility of recurring payments may be worth exploring while preserving the simplicity the participant values.</p>
+    </article>
+<article class="m2-card m2-interview" aria-labelledby="m2-interview-02-title">
+      <h3 id="m2-interview-02-title">Understanding food spending</h3>
+      <p class="m2-caption">30 October 2026 · 05:13</p>
+      <audio controls preload="metadata" aria-label="Interview 02 audio recording"><source src="assets/m2/interview-02.mp4" type="audio/mp4">Your browser does not support embedded audio. <a href="assets/m2/interview-02.mp4" download>Download the recording</a>.</audio>
+      <h4>Current method and recent situation</h4>
+      <p>The participant recently started receiving employment income and has multiple accounts, but uses one account for the food spending discussed. After noticing increased food spending, they reviewed approximately three months of transactions, added the food expenses and calculated an average to understand consumption relative to salary.</p>
+      <h4>What worked and what caused difficulty</h4>
+      <p>For this one-account calculation, the participant says the current method is sufficient and reports no alternative method tried. They do not recall an unresolved question about where money had gone. They anticipate that checking several cards and adding the amounts could become inconvenient, but this was discussed as a possible future problem after an interviewer prompt, not as a recent multi-account difficulty.</p>
+      <h4>Evidence</h4>
+      <ul><li><strong>00:21–00:51 and 01:24–01:49:</strong> reviews approximately three months of food spending and uses one account for those purchases.</li><li><strong>03:15–03:47:</strong> anticipates inconvenience from checking multiple accounts and manually adding amounts.</li><li><strong>03:55–03:59:</strong> “Pentru un singur card e ok de calculat.”</li></ul>
+      <h4>Effect on the hypothesis</h4>
+      <p><strong>Mixed.</strong> This is a concrete category-spending question, but the existing one-account method provides an adequate answer. The anticipated burden of account fragmentation remains a hypothesis to revisit if it occurs; this interview does not establish a present reason to switch to SFA.</p>
+    </article>
+<article class="m2-card m2-interview" aria-labelledby="m2-interview-03-title">
+      <h3 id="m2-interview-03-title">Keeping track across two cards</h3>
+      <p class="m2-caption">31 October 2026 · 03:35</p>
+      <audio controls preload="metadata" aria-label="Interview 03 audio recording"><source src="assets/m2/interview-03.mp4" type="audio/mp4">Your browser does not support embedded audio. <a href="assets/m2/interview-03.mp4" download>Download the recording</a>.</audio>
+      <h4>Current method and recent situation</h4>
+      <p>The participant uses two bank cards, including Revolut, and reviews spending about monthly. They open each banking app, review transactions and keep notes. They sometimes forget spending on one card and then feel they have spent less than they actually have. In one example, they temporarily forgot an online gift purchase and had difficulty identifying the debit because the merchant name did not clearly match the shopping site.</p>
+      <h4>What worked and what caused difficulty</h4>
+      <p>The banking apps provide transaction records and the notes-based method is workable, though the participant says it is not the most efficient. Switching between cards makes spending harder to reconstruct, while unclear merchant names make individual purchases harder to recognise. The purchase was eventually remembered; no exact time to resolve it was reported.</p>
+      <h4>Evidence</h4>
+      <ul><li><strong>00:48–01:08:</strong> forgetting spending on another card can create a misleading impression of staying within the intended amount.</li><li><strong>01:45–02:02:</strong> checks each app and keeps notes: “Nu pot să zic că e cel mai eficient” and “numai că merge”.</li><li><strong>02:16–03:25:</strong> gift purchase, unclear merchant name and difficulty remembering the payment: “mi-a luat ceva timp”.</li></ul>
+      <h4>Effect on the hypothesis</h4>
+      <p><strong>Supported as an exploratory problem.</strong> This case connects spending across cards with a reported difficulty and a concrete transaction-identification issue. It supports testing a consolidated spending view and clearer merchant descriptions. Because the existing method still works, SFA must demonstrate a better result or less effort.</p>
+    </article>
+<article class="m2-card m2-interview" aria-labelledby="m2-interview-04-title">
+      <h3 id="m2-interview-04-title">Adjusting spending to income</h3>
+      <p class="m2-caption">1 November 2026 · 06:25</p>
+      <audio controls preload="metadata" aria-label="Interview 04 audio recording"><source src="assets/m2/interview-04.mp4" type="audio/mp4">Your browser does not support embedded audio. <a href="assets/m2/interview-04.mp4" download>Download the recording</a>.</audio>
+      <h4>Current method and recent situation</h4>
+      <p>The participant uses a main bank account and Revolut, with most spending managed through the main account. Less stable income at the beginning of the year prompted them to review transactions, check merchants and amounts, and decide which expenses to reduce. They cut discretionary spending, including going out, and describe reaching a more manageable situation after one or two months. They plan to monitor larger expenses and save, without tracking every small purchase.</p>
+      <h4>What worked and what caused difficulty</h4>
+      <p>The bank’s transaction history generally answered where money had gone. The main difficulty was adjusting spending to reduced income, not combining accounts or finding missing information. Occasional uncertainty about a payment was resolved by checking its history. The participant does not want detailed tracking of every coffee or meal.</p>
+      <h4>Evidence</h4>
+      <ul><li><strong>01:26–01:46:</strong> reviews spending through the bank app’s transaction history.</li><li><strong>03:44–03:54:</strong> “Nu pot să zic neapărat că căutam o informație”, the participant understood the problem and needed to act on it.</li><li><strong>05:50–06:06:</strong> occasional uncertainty about payments is resolved by checking the history.</li></ul>
+      <h4>Effect on the hypothesis</h4>
+      <p><strong>Weakens a universal need for aggregation; offers exploratory support for spending-control needs.</strong> Multiple services did not create a demonstrated aggregation problem here. SFA would need to offer a practical benefit beyond the existing transaction history and personal spending rules. Monitoring larger expenses is a direction to investigate, not evidence of demand for a new app.</p>
+    </article>
+<article class="m2-card m2-interview" aria-labelledby="m2-interview-05-title">
+      <h3 id="m2-interview-05-title">Bringing spending together</h3>
+      <p class="m2-caption">1 November 2026 · 05:36</p>
+      <audio controls preload="metadata" aria-label="Interview 05 audio recording"><source src="assets/m2/interview-05.mp4" type="audio/mp4">Your browser does not support embedded audio. <a href="assets/m2/interview-05.mp4" download>Download the recording</a>.</audio>
+      <h4>Current method and recent situation</h4>
+      <p>The participant uses several payment cards and banking apps and has tried separate expense-tracking applications. To check monthly spending, they open each banking app’s transaction history and combine the information. They recall doing this to understand where their money had gone, but clarify that the example was not recent. Previous tracking apps required them to enter transactions, purchases and balances manually.</p>
+      <h4>What worked and what caused difficulty</h4>
+      <p>Banking histories provide transaction details, but getting a broader picture means switching between apps. Manual entry in tracking apps was described as annoying and time-consuming. Those apps supported categories, but the participant does not currently describe using a consolidated category or budget view. They expressed interest in automatic consolidation, broad categories, category budgets and alerts as spending approaches a limit or the next salary, these are stated preferences, not tested behaviours.</p>
+      <h4>Evidence</h4>
+      <ul><li><strong>00:30–00:53:</strong> one banking app shows one card’s details, so other apps must be opened to combine spending information.</li><li><strong>02:31–02:53:</strong> “loghez manual fiecare tranzacție” — manual entry of transactions and the current balance is time-consuming.</li><li><strong>04:24–04:46:</strong> describes a desired app that combines transactions across cards and groups them into broad categories.</li><li><strong>04:55–05:22:</strong> requests category budgets and alerts about approaching a limit or managing spending until payday.</li></ul>
+      <h4>Effect on the hypothesis</h4>
+      <p><strong>Supported as an exploratory problem for a narrower segment.</strong> The participant describes using multiple apps to reconstruct spending and disliking the repeated manual entry required by tracking apps. It strengthens the case for testing a combined view without repeated entry with people who want one. The proposed categories and budget alerts followed feature-oriented questions, so they are weaker evidence than the participant’s account of past manual work. An observed comparison is still needed to establish whether SFA reduces effort and becomes useful in practice.</p>
+    </article></div>
+</section>
+
+<section class="m2-section" id="m2-decisions" aria-labelledby="m2-decisions-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">06</span><h2 id="m2-decisions-title">How discovery changes the product direction</h2></div>
+  <p>The clearest next step is to investigate people who use at least two accounts for payments, already try to track spending, and can describe a recent, recurring problem with gathering or maintaining their information. Having multiple accounts alone is not enough to identify a need. This is a candidate segment, not a validated customer profile.</p>
+  <p>The questionnaire and five interviews help narrow what to test, but they do not yet tell us which feature will solve the problem. So rather than treating these as confirmed product decisions, we will use them to guide follow-up questions and same-task comparisons:</p>
+  <ol class="m2-steps">
+    <li><strong>Test whether a combined view reduces effort.</strong> P03 describes forgetting purchases made on another card and difficulty recognising an unclear merchant name; P05 describes combining information across banking apps and disliking manual entry in tracking apps. Both accounts support testing whether SFA can produce a useful, verifiable total with less effort. P05’s interest in categories and budget alerts followed feature-oriented questions, so test these separately rather than treating them as established requirements. Do not assume that a general “health score” is useful.</li>
+    <li><strong>Keep Smart Tags as an open question.</strong> The survey contains one explicit tag request and two holiday-total examples; richer car-cost examples come from comments. These are useful prompts for follow-up, not enough evidence to build a full tagging system. Check whether people repeatedly need a specific breakdown that their current tools cannot provide.</li>
+    <li><strong>Compare statement imports before committing to open banking.</strong> 85/102 respondents had not tried connecting an account to an external app. That does not establish either demand or refusal. Test whether supported statement files can solve the target task first, and investigate bank coverage, trust and cost if exporting data proves to be a recurring obstacle.</li>
+    <li><strong>Look for repeated work before adding automation or exports.</strong> Some respondents describe successful personal spreadsheets and tracking methods, but we have not established how many repeatedly make the same corrections. Observe whether saved rules, batch edits or a spreadsheet export would remove effort without taking away useful control.</li>
+    <li><strong>Keep adjacent use cases exploratory.</strong> Four survey cases mention future obligations or deadlines, three describe shared or family tracking, and two explicitly mention a PFA or their own company. These small counts can guide follow-up questions, but do not yet justify expanding the product to household or business use.</li>
+  </ol>
+  <p class="small muted">These are questions and directions for the next test, not confirmed requirements or claims that the features have been implemented.</p>
+</section>
+
+<section class="m2-section" id="m2-validation" aria-labelledby="m2-validation-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">07</span><h2 id="m2-validation-title">Are we ready for Customer Validation?</h2></div>
+  <p class="lead">Yes for focused customer validation. Not yet for a repeatable sales test.</p>
+
+  <div class="m2-subsection">
+    <h3>Validation 1 outcome: Partially validated, with a clearer target segment</h3>
+    <p>Our exploratory research provides evidence that multi-service financial management is a relevant context and that a subset of users experiences friction when consolidating financial information.</p>
+    <p>Across 102 questionnaire responses:</p>
+    <ul>
+      <li><strong>88/102</strong> respondents reported using at least two financial services.</li>
+      <li><strong>73/88</strong> multi-service respondents confirmed attempting to check their spending within the previous 30 days.</li>
+      <li><strong>33/73</strong> recent multi-service checkers reported spending at least six minutes on the task.</li>
+      <li><strong>15/102</strong> respondents described manual effort, missing information or difficulties maintaining consistent tracking.</li>
+      <li><strong>51/73</strong> recent multi-service checkers considered their task easy, demonstrating that existing solutions already work for many users.</li>
+    </ul>
+    <p class="small muted">These are exploratory findings from our sample, not population-level estimates.</p>
+  </div>
+
+  <div class="m2-subsection">
+    <h3>Hypothesis validation</h3>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Hypothesis validation results">
+      <table><thead><tr><th scope="col">Hypothesis</th><th scope="col">Status</th><th scope="col">Key finding</th></tr></thead><tbody>
+        <tr><td>Multi-service financial management is a relevant user context</td><td>Supported in our sample</td><td>88/102 respondents use at least two services.</td></tr>
+        <tr><td>Some users encounter friction when consolidating financial information</td><td>Partially supported</td><td>Reported manual effort, tracking inconsistencies and longer workflows identify potential pain points.</td></tr>
+        <tr><td>Every multi-bank user needs a new financial dashboard</td><td>Not supported</td><td>51/73 recent multi-service checkers describe their task as easy.</td></tr>
+        <tr><td>SFA can provide a simpler and more reliable financial overview</td><td>Ready for testing</td><td>Requires comparison against existing workflows and verification of financial totals.</td></tr>
+        <tr><td>Users will adopt and pay for SFA</td><td>Not yet validated</td><td>Retention, willingness to switch and actual payment behavior remain untested.</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <div class="m2-subsection">
+    <h3>What we learned</h3>
+    <div class="m2-callout"><p><strong>Our strongest opportunity is not simply displaying multiple bank accounts in one place. It is reducing unnecessary effort and helping users obtain accurate, actionable answers about their finances.</strong></p></div>
+    <p>The next validation phase will focus on participants who currently experience friction, while also including users who are satisfied with their existing solutions as counterexamples.</p>
+  </div>
+
+  <div class="m2-callout"><p><strong>Conclusion:</strong> Validation 1 provides sufficient exploratory evidence to proceed to focused solution testing. It does not yet establish product-market fit or commercial viability.</p></div>
+</section>
+
+<!-- END M2 -->
 
     <footer>
       <span>Smart Finance Advisor · Software Engineering Fiki</span>
@@ -1655,10 +1758,19 @@
     // Close the native mobile contents menu after selecting a section.
     document.querySelectorAll('.mobile-menu nav a').forEach(function (link) {
       link.addEventListener('click', function () {
-        link.closest('details').removeAttribute('open');
+        link.closest('.mobile-menu').removeAttribute('open');
       });
     });
+    // Preserve the attached file's first-visit M2 entry point.
+    try {
+      var firstVisitKey = 'sfa-mti-m2-initial-visit';
+      if (!window.location.hash && !localStorage.getItem(firstVisitKey)) {
+        localStorage.setItem(firstVisitKey, 'true');
+        window.location.hash = 'm2';
+      }
+    } catch (error) {
+      // The page remains usable when browser storage is unavailable.
+    }
   </script>
 </body>
-
 </html>
