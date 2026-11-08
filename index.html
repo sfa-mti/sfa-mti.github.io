@@ -1079,6 +1079,117 @@
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
+/* START M3 CSS */
+.m3-hero { margin-top: 24px; }
+#m3 h2 { font: 400 clamp(38px, 4vw, 60px)/1.08 Georgia, serif; letter-spacing: -1.8px; margin-top: 24px; max-width: 780px; }
+#m3 .intro { max-width: 760px; }
+.m3-section { max-width: 1600px; }
+.m3-section > .small { margin-top: 12px; }
+.m3-resource-intro { margin-top: 24px; }
+.m3-pdf-preview { margin-top: 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
+.m3-pdf-preview iframe { display: block; width: 100%; height: min(78vh, 860px); min-height: 520px; border: 0; }
+.m3-pdf-download { display: inline-block; margin-top: 14px; }
+.m3-wireframe { margin-top: 24px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--white); box-shadow: 0 12px 35px rgba(32, 56, 47, .07); }
+.m3-browser-bar { display: flex; align-items: center; gap: 6px; height: 39px; padding: 0 14px; border-bottom: 1px solid var(--line); background: #f0f1eb; }
+.m3-browser-bar > span { width: 7px; height: 7px; border-radius: 50%; background: #c6ccc1; }
+.m3-browser-bar small { margin-left: 9px; color: var(--muted); font-size: 10px; }
+.m3-app { display: grid; grid-template-columns: 178px minmax(0, 1fr); min-height: 470px; }
+.m3-app-nav { display: flex; flex-direction: column; gap: 7px; padding: 22px 14px; border-right: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.m3-app-nav > strong { display: flex; align-items: center; gap: 8px; margin-bottom: 17px; color: var(--ink); font-size: 11px; }
+.m3-mark { display: inline-grid; width: 25px; height: 25px; place-items: center; border-radius: 7px; background: var(--green); color: var(--accent); font-size: 10px; font-weight: 800; }
+.m3-app-nav > span:not(.m3-mark) { padding: 8px 10px; border-radius: 6px; }
+.m3-app-nav .m3-nav-active { background: var(--soft); color: var(--green); font-weight: 700; }
+.m3-app-nav .m3-nav-bottom { margin-top: auto; }
+.m3-dashboard { min-width: 0; padding: 25px; background: #f8f9f5; }
+.m3-dashboard-head, .m3-widget-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.m3-dashboard-head { margin-bottom: 19px; }
+.m3-dashboard-head h3 { margin-top: 4px; font-size: 21px; }
+.m3-label { color: var(--muted); font-size: 9px; font-weight: 750; letter-spacing: 1px; }
+.m3-avatar { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; background: var(--soft); color: var(--green); font-size: 11px; font-weight: 700; }
+.m3-stat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.m3-widget { min-width: 0; padding: 16px; border: 1px solid var(--line); border-radius: 9px; background: var(--white); }
+.m3-widget > strong { display: block; margin: 8px 0 3px; font: 400 24px/1.2 Georgia, serif; color: var(--ink); }
+.m3-widget > strong small { font: 500 10px/1.4 ui-sans-serif, system-ui, sans-serif; }
+.m3-widget > span:last-child { color: var(--muted); font-size: 10px; }
+.m3-balance { background: #edf2e6; }
+.m3-dashboard-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 10px; margin-top: 10px; }
+.m3-widget-head { margin-bottom: 15px; }
+.m3-widget-head h3 { font-size: 12px; }
+.m3-widget-head > span, .m3-widget-head a { color: var(--muted); font-size: 9px; text-decoration: none; }
+.m3-chart { display: flex; height: 112px; align-items: end; justify-content: space-around; gap: 10px; padding: 8px 6px 0; border-bottom: 1px solid var(--line); background: repeating-linear-gradient(to bottom, transparent 0, transparent 26px, #edf0e9 27px, transparent 28px); }
+.m3-chart i { width: 10%; height: var(--bar); border-radius: 4px 4px 0 0; background: #a9b89d; }
+.m3-chart i:nth-child(3n + 2) { background: #d7ed91; }
+.m3-chart-labels { display: flex; justify-content: space-around; padding-top: 5px; color: var(--muted); font-size: 8px; }
+.m3-budget p { display: flex; justify-content: space-between; margin: 14px 0 5px; color: var(--muted); font-size: 9px; }
+.m3-budget p strong { color: var(--ink); font-weight: 650; }
+.m3-progress { height: 5px; overflow: hidden; border-radius: 5px; background: #edf0e9; }
+.m3-progress i { display: block; width: var(--progress); height: 100%; border-radius: inherit; background: #829c66; }
+.m3-transactions { margin-top: 10px; }
+.m3-transaction { display: grid; grid-template-columns: 25px minmax(0, 1fr) auto; align-items: center; gap: 9px; padding: 9px 0; border-top: 1px solid #edf0e9; }
+.m3-transaction-icon { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 7px; background: var(--soft); color: var(--green); font-size: 9px; font-weight: 700; }
+.m3-transaction > span:nth-child(2) strong, .m3-transaction > span:nth-child(2) small { display: block; }
+.m3-transaction > span:nth-child(2) strong, .m3-transaction > strong { font-size: 9px; }
+.m3-transaction > span:nth-child(2) small { color: var(--muted); font-size: 8px; }
+.m3-notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 25px; }
+.m3-notes article { padding-top: 14px; border-top: 1px solid var(--line); }
+.m3-notes h3 { margin: 7px 0; }
+.m3-notes p { font-size: 12px; }
+.m3-landing-preview { margin-top: 24px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 35px rgba(32, 56, 47, .07); }
+.m3-landing-screenshot { max-width: 1288px; margin: 22px auto 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #17112d; box-shadow: 0 12px 35px rgba(32, 56, 47, .07); }
+.m3-landing-screenshot img { display: block; width: 100%; height: auto; }
+.m3-landing-nav { display: flex; align-items: center; gap: 25px; padding: 15px 6%; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 10px; }
+.m3-landing-nav .m3-brand { display: flex; align-items: center; gap: 8px; margin-right: auto; color: var(--ink); font-weight: 700; text-decoration: none; }
+.m3-landing-nav .m3-signin { padding: 7px 12px; border: 1px solid var(--line); border-radius: 5px; color: var(--green); font-weight: 650; text-decoration: none; }
+.m3-landing-hero { display: grid; grid-template-columns: 1.1fr .8fr; align-items: center; gap: 8%; padding: clamp(26px, 5vw, 62px) 9%; background: #f7f8f2; }
+.m3-pill { display: inline-block; padding: 6px 9px; border-radius: 20px; background: var(--soft); color: var(--green); font-size: 8px; font-weight: 750; letter-spacing: .8px; }
+.m3-landing-hero h3 { max-width: 430px; margin-top: 17px; font: 400 clamp(27px, 3.2vw, 42px)/1.14 Georgia, serif; letter-spacing: -.8px; }
+.m3-landing-hero > div:first-child > p:not(.m3-privacy-note) { max-width: 410px; margin-top: 13px; color: var(--muted); font-size: 12px; }
+.m3-cta { display: inline-flex; align-items: center; gap: 16px; margin-top: 20px; padding: 11px 15px; border-radius: 6px; background: var(--green); color: var(--white) !important; font-size: 10px; font-weight: 650; text-decoration: none; }
+.m3-privacy-note { margin-top: 12px; color: var(--muted); font-size: 9px; }
+.m3-landing-card { padding: 20px; border: 1px solid var(--line); border-radius: 11px; background: var(--white); box-shadow: 0 8px 24px rgba(32, 56, 47, .06); }
+.m3-landing-card > strong, .m3-landing-total, .m3-landing-sub { display: block; }
+.m3-landing-card > strong { margin-top: 12px; font-size: 12px; }
+.m3-landing-total { margin-top: 12px; font: 400 29px/1.2 Georgia, serif; }
+.m3-landing-total small { font: 500 10px/1.4 ui-sans-serif, system-ui, sans-serif; }
+.m3-landing-sub { margin-top: 3px; color: var(--muted); font-size: 9px; }
+.m3-mini-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 12px; margin-top: 12px; border-top: 1px solid #edf0e9; font-size: 9px; }
+.m3-mini-row > span { display: flex; align-items: center; gap: 7px; }
+.m3-dot { width: 7px; height: 7px; border-radius: 50%; }
+.m3-dot-green { background: #829c66; }
+.m3-dot-yellow { background: #d0ad60; }
+.m3-dot-gray { background: #b7c0b4; }
+.m3-landing-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 27px 9%; }
+.m3-landing-features article > span { color: var(--muted); font-size: 9px; }
+.m3-landing-features h4 { margin: 7px 0 4px; font-size: 11px; }
+.m3-landing-features p { color: var(--muted); font-size: 9px; }
+.m3-landing-footer { display: flex; justify-content: space-between; gap: 15px; padding: 13px 6%; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; }
+.m3-disclaimer { margin-top: 12px; }
+@media (max-width: 1000px) {
+  .m3-stat-grid { grid-template-columns: 1fr; }
+  .m3-dashboard-grid { grid-template-columns: 1fr; }
+  .m3-app { grid-template-columns: 145px minmax(0, 1fr); }
+  .m3-dashboard { padding: 17px; }
+}
+@media (max-width: 760px) {
+  #m3 h2 { font-size: 38px; letter-spacing: -1px; }
+  .m3-section { scroll-margin-top: 82px; }
+  .m3-pdf-preview iframe { height: 68vh; min-height: 400px; }
+  .m3-app { grid-template-columns: 1fr; }
+  .m3-app-nav { flex-direction: row; align-items: center; gap: 5px; overflow-x: auto; padding: 10px; border-right: 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .m3-app-nav > strong { flex: none; margin: 0 7px 0 0; }
+  .m3-app-nav > span:not(.m3-mark) { padding: 7px; }
+  .m3-app-nav .m3-nav-bottom { margin-top: 0; }
+  .m3-dashboard { padding: 13px; }
+  .m3-stat-grid, .m3-dashboard-grid, .m3-notes, .m3-landing-features { grid-template-columns: 1fr; }
+  .m3-notes { gap: 14px; }
+  .m3-landing-nav { gap: 12px; padding: 12px; }
+  .m3-landing-nav > span { display: none; }
+  .m3-landing-hero { grid-template-columns: 1fr; gap: 24px; padding: 28px 20px; }
+  .m3-landing-features { gap: 15px; padding: 22px 20px; }
+  .m3-landing-footer { flex-direction: column; gap: 4px; padding: 12px 20px; }
+}
+/* END M3 CSS */
+
     /* END M2 CSS */
   </style>
 </head>
@@ -1102,7 +1213,7 @@
           <a href="#revenue"><span>10</span> Revenue streams</a>
         </div>
       </details>
-      <details class="nav-group" open>
+      <details class="nav-group">
   <summary><span>M2</span> Validation 1</summary>
   <div class="nav-children">
     <a href="#m2"><span>00</span> M2 overview</a>
@@ -1115,9 +1226,18 @@
     <a href="#m2-validation"><span>07</span> Validation &amp; next test</a>
   </div>
 </details>
+      <details class="nav-group" open>
+        <summary><span>M3</span> Wireframe and Landing Page</summary>
+        <div class="nav-children">
+          <a href="#m3"><span>00</span> M3 overview</a>
+          <a href="#m3-wireframe"><span>01</span> Wireframes</a>
+          <a href="#m3-landing"><span>02</span> Landing page</a>
+          <a href="#m3-validation"><span>03</span> Connection to validation</a>
+        </div>
+      </details>
     </nav>
     <div class="rail-bottom">
-      <span class="status-dot" aria-hidden="true"></span>Updated 01 November 2026
+      <span class="status-dot" aria-hidden="true"></span>Updated 08 November 2026
     </div>
   </aside>
   <header class="mobile-header">
@@ -1143,7 +1263,7 @@
             <a href="#revenue"><span>10</span> Revenue streams</a>
           </div>
         </details>
-        <details class="nav-group" open>
+        <details class="nav-group">
   <summary><span>M2</span> Validation 1</summary>
   <div class="nav-children">
     <a href="#m2"><span>00</span> M2 overview</a>
@@ -1156,6 +1276,15 @@
     <a href="#m2-validation"><span>07</span> Validation &amp; next test</a>
   </div>
 </details>
+        <details class="nav-group" open>
+          <summary><span>M3</span> Wireframe and Landing Page</summary>
+          <div class="nav-children">
+            <a href="#m3"><span>00</span> M3 overview</a>
+            <a href="#m3-wireframe"><span>01</span> Wireframes</a>
+            <a href="#m3-landing"><span>02</span> Landing page</a>
+            <a href="#m3-validation"><span>03</span> Connection to validation</a>
+          </div>
+        </details>
       </nav>
     </details>
   </header>
@@ -1749,6 +1878,79 @@
 
 <!-- END M2 -->
 
+<!-- START M3 -->
+<section class="hero m3-hero" id="m3" aria-labelledby="m3-title">
+  <p class="eyebrow">M3 / Wireframe and Landing Page</p>
+  <h2 id="m3-title">Your finances, together.<br>A clearer picture of your money.</h2>
+  <p class="intro">For this milestone, the wireframes and landing page present the product’s main experience and explore additional functionality through an interactive prototype.</p>
+  <div class="hero-footer">
+    <div><strong>Wireframes and landing page</strong><small>Milestone 3 · 09 November 2026</small></div>
+    <span class="hero-index" aria-hidden="true">M3</span>
+  </div>
+</section>
+
+<section class="m2-section m3-section" id="m3-wireframe" aria-labelledby="m3-wireframe-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">01</span><h2 id="m3-wireframe-title">Wireframes</h2></div>
+  <p class="lead">The Balsamiq wireframes cover 11 screens across eight sections, illustrating the proposed SFA user experience:</p>
+  <ul class="m3-screen-list">
+    <li>Bank connection and simulated authorization</li>
+    <li>Dashboard</li>
+    <li>Transaction review</li>
+    <li>Spending analysis</li>
+    <li>Budgets and recurring payments</li>
+    <li>Budget simulator</li>
+    <li>Connected accounts</li>
+    <li>Settings</li>
+  </ul>
+  <p>The screens show how users move from connecting accounts to reviewing transactions, understanding spending patterns and managing their budgets.</p>
+  <div class="m2-subsection">
+    <h3>Example flow: connect an account</h3>
+    <ol class="m2-steps">
+      <li>The user selects a bank from the connection screen.</li>
+      <li>The authorization screen explains the requested access and lets the user choose which accounts to connect.</li>
+      <li>The user completes the simulated connection and continues to the dashboard. Connected accounts can be reviewed through the navigation menu.</li>
+    </ol>
+  </div>
+  <div class="m2-subsection">
+    <h3>Example flow: review spending</h3>
+    <ol class="m2-steps">
+      <li>The user opens the dashboard to review income, expenses and account balances.</li>
+      <li>A notice highlights a possible transfer between their own accounts.</li>
+      <li>The user opens the transaction review screen and checks the entries.</li>
+      <li>After confirming the transfer, the user can review the updated spending totals and explore the spending analysis.</li>
+    </ol>
+  </div>
+  <div class="m2-subsection">
+    <h3>Additional concept: Budget simulator</h3>
+    <p>The wireframes also explore a budget simulator. Users configure an additional expense, such as a higher monthly rent, and follow a demonstration of its potential effect on their budget.</p>
+    <p>The flow includes configuration, a trial view and a results screen. It is an exploratory feature within SFA; its usefulness and role in the product will be evaluated through further user feedback.</p>
+  </div>
+  <p class="lead m3-resource-intro">The PDF includes clickable navigation between screens.</p>
+  <div class="m3-pdf-preview">
+    <iframe src="assets/m3/SFA-M3-Wireframes-Navigabile.pdf#toolbar=0&amp;navpanes=0&amp;view=FitH" title="SFA M3 clickable wireframes PDF" loading="lazy">
+      Your browser does not support embedded PDFs. <a href="assets/m3/SFA-M3-Wireframes-Navigabile.pdf">Download the wireframes PDF</a>.
+    </iframe>
+  </div>
+  <p><a href="assets/m3/SFA-M3-Wireframes-Navigabile.pdf" download>Download the wireframes PDF</a></p>
+</section>
+
+<section class="m2-section m3-section" id="m3-landing" aria-labelledby="m3-landing-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">02</span><h2 id="m3-landing-title">Landing page</h2></div>
+  <p class="lead">The landing page introduces SFA and its main features for managing personal finances in one place.</p>
+  <p>The product’s broader scope includes account consolidation, transaction management, spending analysis, budgets, recurring payments, financial recommendations and AI-generated summaries.</p>
+  <p><a href="https://smart-finance-advisor-production.vercel.app/" target="_blank" rel="noopener noreferrer">View the live landing page</a></p>
+  <figure class="m3-landing-screenshot">
+    <img src="assets/m3/landing-page.png" alt="Smart Finance Advisor landing page with its financial overview dashboard" loading="lazy">
+  </figure>
+</section>
+
+<section class="m2-section m3-section" id="m3-validation" aria-labelledby="m3-validation-title">
+  <div class="section-head"><span class="section-number" aria-hidden="true">03</span><h2 id="m3-validation-title">Connection to validation</h2></div>
+  <p>SFA's primary objective is to <strong>reduce the effort required to understand and manage personal finances</strong> across multiple financial services.</p>
+  <p>The next development and validation stages will focus on determining which capabilities provide meaningful improvements over users' current financial management tools. Further testing will assess whether users can navigate these flows, understand the information presented and find value in additional features such as the budget simulator.</p>
+</section>
+<!-- END M3 -->
+
     <footer>
       <span>Smart Finance Advisor · Software Engineering Fiki</span>
       <a href="#overview">Back to overview ↑</a>
@@ -1761,15 +1963,9 @@
         link.closest('.mobile-menu').removeAttribute('open');
       });
     });
-    // Preserve the attached file's first-visit M2 entry point.
-    try {
-      var firstVisitKey = 'sfa-mti-m2-initial-visit';
-      if (!window.location.hash && !localStorage.getItem(firstVisitKey)) {
-        localStorage.setItem(firstVisitKey, 'true');
-        window.location.hash = 'm2';
-      }
-    } catch (error) {
-      // The page remains usable when browser storage is unavailable.
+    // Open M3 by default while preserving explicit section links.
+    if (!window.location.hash) {
+      window.location.hash = 'm3';
     }
   </script>
 </body>
