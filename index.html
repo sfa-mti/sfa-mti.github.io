@@ -8,6 +8,12 @@
     content="Smart Finance Advisor — Software Engineering project Fiki. Team, problem, solution, research, business model and milestone progress.">
   <meta name="theme-color" content="#173b33">
   <title>SFA — Project Fiki</title>
+  <script>
+    // Set the initial milestone before layout rendering.
+    if (!window.location.hash) {
+      window.history.replaceState(null, '', '#m4');
+    }
+  </script>
   <style>
     :root {
       --paper: #f5f4ee;
@@ -1550,6 +1556,13 @@
       max-width: 780px;
     }
 
+    #m4 h2 {
+      font: 400 clamp(38px, 4vw, 60px)/1.08 Georgia, serif;
+      letter-spacing: -1.8px;
+      margin-top: 24px;
+      max-width: 780px;
+    }
+
     #m3 .intro {
       max-width: 760px;
     }
@@ -2209,6 +2222,10 @@
     /* START M4 CSS */
     .m2-interview video {
       width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      display: block;
+      object-fit: contain;
       margin-top: 15px;
       border-radius: 8px;
       background: var(--ink);
@@ -2251,7 +2268,7 @@
           <a href="#m2-validation"><span>07</span> Validation &amp; next test</a>
         </div>
       </details>
-      <details class="nav-group" open>
+      <details class="nav-group">
         <summary><span>M3</span> Wireframe and Landing Page</summary>
         <div class="nav-children">
           <a href="#m3"><span>00</span> M3 overview</a>
@@ -2273,7 +2290,7 @@
       </details>
     </nav>
     <div class="rail-bottom">
-      <span class="status-dot" aria-hidden="true"></span>Updated 08 November 2026
+      <span class="status-dot" aria-hidden="true"></span>Updated 17 November 2026
     </div>
   </aside>
   <header class="mobile-header">
@@ -2312,13 +2329,24 @@
             <a href="#m2-validation"><span>07</span> Validation &amp; next test</a>
           </div>
         </details>
-        <details class="nav-group" open>
+        <details class="nav-group">
           <summary><span>M3</span> Wireframe and Landing Page</summary>
           <div class="nav-children">
             <a href="#m3"><span>00</span> M3 overview</a>
             <a href="#m3-wireframe"><span>01</span> Wireframes</a>
             <a href="#m3-landing"><span>02</span> Landing page</a>
             <a href="#m3-validation"><span>03</span> Connection to validation</a>
+          </div>
+        </details>
+        <details class="nav-group" open>
+          <summary><span>M4</span> Validation & Personas</summary>
+          <div class="nav-children">
+            <a href="#m4"><span>00</span> M4 overview</a>
+            <a href="#m4-persona"><span>01</span> User persona</a>
+            <a href="#m4-stories"><span>02</span> User stories & flows</a>
+            <a href="#m4-interviews"><span>03</span> Face-to-face interviews</a>
+            <a href="#m4-conclusions"><span>04</span> Findings & conclusions</a>
+            <a href="#m4-wireframes"><span>05</span> Updated wireframes</a>
           </div>
         </details>
       </nav>
@@ -3983,10 +4011,10 @@
       <h2 id="m4-title">Validating our assumptions<br>with face-to-face feedback.</h2>
       <p class="intro">For this milestone, we defined our primary user persona, mapped out user stories, use cases, and
         user
-        flows, and conducted three face-to-face video interviews to update our wireframes based on real user feedback.
+        flows, and conducted four face-to-face video interviews to update our wireframes based on real user feedback.
       </p>
       <div class="hero-footer">
-        <div><strong>Interviews &amp; Updated Wireframes</strong><small>Milestone 4 · November 2026</small></div>
+        <div><strong>Interviews &amp; Updated Wireframes</strong><small>Milestone 4 · 17 November 2026</small></div>
         <span class="hero-index" aria-hidden="true">M4</span>
       </div>
     </section>
@@ -4020,7 +4048,7 @@
         <div class="m2-card">
           <span class="m2-card-label">Frustrations &amp; Core Needs</span>
           <h3>Key Pain Points</h3>
-          <ul style="margin-top: 12px; padding-left: 18px; font-size: 14px;">
+          <ul style="margin-top: 12px; padding-left: 18px; font-size: 12px;">
             <li><strong>High manual effort:</strong> Uploading bank statements or logging receipts manually across
               multiple
               accounts takes too much time to sustain.</li>
@@ -4033,7 +4061,7 @@
             <li><strong>Rigid budgeting:</strong> Prefers setting a single overall monthly spending limit rather than
               configuring complex category-by-category rules from day one.</li>
           </ul>
-          <p style="margin-top: 15px; font-size: 14px;"><strong>Core Need:</strong> A trustworthy, low-maintenance
+          <p style="margin-top: 15px; font-size: 12px;"><strong>Core Need:</strong> A trustworthy, low-maintenance
             financial
             overview that consolidates accounts automatically, excludes self-transfers, and highlights actionable ways
             to
@@ -4106,6 +4134,14 @@
                   get actionable value beyond basic charts.</td>
                 <td>AI insights highlight specific non-essential spending spikes and suggest realistic monthly savings
                   targets.</td>
+              </tr>
+              <tr>
+                <td><strong>US-06</strong></td>
+                <td><strong>As a</strong> new user, <strong>I want to</strong> try SFA by uploading a bank statement
+                  before connecting my bank account, <strong>so that</strong> I can evaluate its usefulness and decide
+                  whether I trust it with automatic access.</td>
+                <td>The onboarding flow offers statement import as an early option, clearly explains the next step,
+                  and only requests bank authorization after the user chooses to continue.</td>
               </tr>
             </tbody>
           </table>
@@ -4197,7 +4233,7 @@
       <div class="section-head"><span class="section-number" aria-hidden="true">03</span>
         <h2 id="m4-interviews-title">Face-to-Face Interviews</h2>
       </div>
-      <p class="intro-note">We conducted 3 face-to-face video interviews with potential users matching our target
+      <p class="intro-note">We conducted 4 face-to-face video interviews with potential users matching our target
         segment.
         We presented them with our landing page and M3 wireframes/prototype to gather direct feedback.</p>
 
@@ -4209,7 +4245,7 @@
           <p class="m2-caption">Target Segment (Multi-bank user) · Duration: 13:50</p>
 
           <video controls preload="metadata" aria-label="Interview 01 video recording">
-            <source src="assets/m4/interview-01.mp4" type="video/mp4">
+            <source src="assets/m4/interview-01-multi-bank-notes.mp4" type="video/mp4">
             Your browser does not support embedded video.
           </video>
 
@@ -4252,7 +4288,7 @@
           <p class="m2-caption">Target Segment (Young professional / Student) · Duration: 17:37</p>
 
           <video controls preload="metadata" aria-label="Interview 02 video recording">
-            <source src="assets/m4/interview-02.mp4" type="video/mp4">
+            <source src="assets/m4/interview-02-multi-bank-ai.mp4" type="video/mp4">
             Your browser does not support embedded video.
           </video>
 
@@ -4298,7 +4334,7 @@
           <p class="m2-caption">Target Segment (Employed / Investor) · Duration: 17:50</p>
 
           <video controls preload="metadata" aria-label="Interview 03 video recording">
-            <source src="assets/m4/interview-03.mp4" type="video/mp4">
+            <source src="assets/m4/interview-03-money-manager.mp4" type="video/mp4">
             Your browser does not support embedded video.
           </video>
 
@@ -4310,34 +4346,69 @@
 
           <h4>Key observations &amp; friction points</h4>
           <ul>
-            <li><strong>03:42–04:25:</strong> Expressed privacy concerns after reading that financial history is
-              processed
-              and stored on cloud servers rather than locally on the device.</li>
-            <li><strong>07:12–07:44:</strong> Strongly favors automated bank connections over manual PDF imports,
-              trusting
-              regulated Open Banking providers.</li>
-            <li><strong>09:45–10:59:</strong> Suggested a default filter to hide internal self-transfers from
-              transaction
-              lists/totals, and criticized the transaction editing UX (expected inline click-to-edit on merchant
-              titles).
+            <li><strong>01:12–01:38:</strong> Identified budgets, recurring payments and the amount left after planning
+              as relevant features.</li>
+            <li><strong>02:04–04:35:</strong> Understood the privacy policy but preferred local processing and storage
+              of financial history.</li>
+            <li><strong>06:31–07:43:</strong> Found registration simple and preferred automated bank connections over
+              manual uploads.</li>
+            <li><strong>09:05–10:00:</strong> Proposed hiding own-account transfers by default, while keeping them
+              available through a separate filter.</li>
+            <li><strong>10:12–10:58:</strong> Expected merchant names and categories to support direct, visible editing.
             </li>
-            <li><strong>11:10–12:14 &amp; 15:58:</strong> Identified the <strong>Budgets</strong> screen as the most
-              confusing part of the app after attempting to edit the read-only <em>"Buget Total"</em> summary card
-              directly.
-            </li>
-            <li><strong>14:45–17:02:</strong> Considered current AI advice too generic ("stating the obvious") and noted
-              he
-              would not switch from his current app without manual cash/loan entry and concrete cost-reduction
-              alternatives.
-            </li>
+            <li><strong>11:42–12:15 &amp; 15:48–16:02:</strong> Expected a global budget and identified budgets as the
+              most confusing part of the interface.</li>
+            <li><strong>14:19–15:41:</strong> Found AI recommendations too generic and asked for transaction-level
+              analysis, alternatives and concrete spending reductions.</li>
+            <li><strong>16:02–17:35:</strong> Would not switch from his free, local Money Manager app without clearer
+              benefits and manual cash-expense support.</li>
           </ul>
 
           <h4>Impact on product &amp; wireframes</h4>
-          <p><strong>Actionable updates:</strong> Make the <em>Total Budget</em> card directly editable, add a default
-            "Hide
-            internal transfers" toggle in Transactions, enable inline merchant/category editing, and include a manual
-            entry
-            button for cash expenses.</p>
+          <p><strong>Actionable updates:</strong> Clarify the global versus category budgets, add visible inline
+            transaction editing, separate internal-transfer filtering from expense totals, and make AI recommendations
+            specific to individual spending patterns. Local-only operation should be investigated rather than assumed as
+            a requirement.</p>
+        </article>
+
+        <!-- Interview 04 -->
+        <article class="m2-card m2-interview" aria-labelledby="m4-interview-04-title">
+          <h3 id="m4-interview-04-title">Interview 04: Building trust through staged account setup and mobile access
+          </h3>
+          <p class="m2-caption">Target Segment (Potential mobile user) · Duration: 15:00</p>
+
+          <video controls preload="metadata" aria-label="Interview 04 video recording">
+            <source src="assets/m4/interview-04-trust-mobile.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+
+          <h4>Current method &amp; expectations</h4>
+          <p>The participant found the landing page clear and wanted a convenient way to review personal finances on
+            the phone. He preferred to evaluate SFA through imported statements before deciding whether to connect a
+            bank account.</p>
+
+          <h4>Key observations &amp; friction points</h4>
+          <ul>
+            <li><strong>00:37–02:41:</strong> Liked the design and understood monthly tracking and category breakdown;
+              requested more visible explanations of how SFA works.</li>
+            <li><strong>08:23–09:43:</strong> Identified privacy and confidentiality as important and proposed starting
+              with statement import, then connecting a bank only after understanding the value of the app.</li>
+            <li><strong>09:54–10:06:</strong> Asked whether the displayed amount represented spending, balance or money
+              remaining, indicating a need for clearer financial terminology.</li>
+            <li><strong>10:59–12:41:</strong> Could associate category editing with Transactions and understood the
+              category workflow after guidance, but asked for clearer explanations of total budgets and category limits.
+            </li>
+            <li><strong>14:01–14:10:</strong> Considered an optional, dismissible onboarding tutorial useful even though
+              the tested experience felt reasonably intuitive.</li>
+            <li><strong>14:27–14:56:</strong> Requested access from a phone and declared that he would use SFA; this is
+              stated interest rather than confirmed recurring use or willingness to pay.</li>
+          </ul>
+
+          <h4>Impact on product &amp; wireframes</h4>
+          <p><strong>Actionable updates:</strong> Add statement import before automatic bank authorization, clarify
+            spending, balance and remaining funds, distinguish the total budget from category limits, and add an optional
+            mobile-oriented onboarding tutorial. The mobile need should be represented as responsive or dedicated
+            wireframe coverage, not as an already decided native implementation.</p>
         </article>
       </div>
     </section>
@@ -4346,7 +4417,7 @@
       <div class="section-head"><span class="section-number" aria-hidden="true">04</span>
         <h2 id="m4-conclusions-title">Findings &amp; Conclusions</h2>
       </div>
-      <p class="lead">Cross-analyzing all three face-to-face interviews revealed consistent patterns and critical
+      <p class="lead">Cross-analyzing all four face-to-face interviews revealed consistent patterns and critical
         usability
         bottlenecks that directly shaped our M4 wireframe updates.</p>
 
@@ -4354,33 +4425,37 @@
         <p><strong>Overall Conclusion:</strong> Users validate the core value of consolidating multiple bank accounts
           without manual spreadsheet upkeep, but adoption depends on <strong>upfront privacy transparency</strong>, a
           <strong>simpler Total Budget workflow</strong>, <strong>automatic exclusion of internal transfers</strong>,
-          and
-          <strong>actionable AI cost-cutting insights</strong>.
+          <strong>actionable AI cost-cutting insights</strong>, and a way to evaluate the app before full bank
+          authorization.
         </p>
       </div>
 
       <ul class="m2-evidence-list" style="margin-top: 20px; font-size: 14px;">
         <li><strong>1. The Budgets screen was the #1 usability bottleneck:</strong> In Interview 01, the participant
           missed
-          the <em>Budgets</em> tab completely and confused actual spending with the budget limit. In Interviews 02 and
-          03,
-          both participants tried to set a single global <em>Total Monthly Budget</em> directly on the top summary card
-          rather than configuring individual categories.</li>
-        <li><strong>2. Privacy &amp; data-handling guarantees must be visible upfront:</strong> All three participants
-          hesitated before connecting accounts because SFA is a new application. Reading explicit assurances (read-only
-          access, encryption, no AI model training on personal data, and full data deletion on account closure) resolved
-          concerns—proving this information belongs directly on the Landing Page, not hidden inside legal terms.</li>
-        <li><strong>3. Automated bank sync is preferred, with hybrid fallbacks:</strong> All three users strongly
-          preferred
-          automated Open Banking sync over recurring PDF statement uploads, while requesting an <em>"Other banks"</em>
-          fallback option (Interview 02) and manual entry for cash receipts or personal loans (Interview 03).</li>
-        <li><strong>4. Self-transfers must be hidden by default &amp; editing must be inline:</strong> Users unanimously
-          expect transfers between their own accounts (e.g., ING &harr; Revolut) to net to zero automatically without
-          inflating expenses, and expect inline click-to-edit on merchant names alongside custom categories.</li>
-        <li><strong>5. AI insights must move from generic summaries to concrete actions:</strong> Participants noted
-          that
-          merely restating past spending feels obvious; to justify a paid subscription, AI recommendations must flag
-          unnecessary spending spikes and suggest concrete saving or investing opportunities.</li>
+          the <em>Budgets</em> tab completely and confused actual spending with the budget limit. In Interviews 02, 03
+          and 04, participants expected a clear single global <em>Total Monthly Budget</em> and asked how it differs
+          from category limits.</li>
+        <li><strong>2. Privacy and data handling must be visible before bank authorization:</strong> Participants in
+          Interviews 01-03 requested or questioned read-only access, encryption, data retention and account deletion.
+          Interview 04 proposed trying SFA through statement import before connecting a bank, showing that trust can
+          be established progressively rather than only through a security banner.</li>
+        <li><strong>3. Bank connection can remain the preferred sync method with staged fallbacks:</strong> Interviews
+          02 and 03 preferred Open Banking, Interview 01 requested an accessible alternative, and Interview 04 offered
+          statement import as the first step. An <em>"Other banks"</em> option and manual cash/loan entry cover
+          unsupported or privacy-sensitive situations.</li>
+        <li><strong>4. Transactions need clear editing and transfer semantics:</strong> Participants in Interviews 01,
+          02 and 03 expected own-account transfers to be separated from spending and requested visible inline editing
+          of merchant names and categories. The wireframe should explain whether an internal transfer is hidden,
+          included or filtered out.</li>
+        <li><strong>5. AI insights must move from generic summaries to concrete actions:</strong> Participants in
+          Interviews 02 and 03 asked for unnecessary spending spikes and concrete alternatives. Interview 04 requested
+          clearer explanations around totals and budgeting, but did not provide enough evidence to judge AI
+          recommendations.</li>
+        <li><strong>6. A short optional guide and mobile access improve discoverability:</strong> Interview 01 explicitly
+          requested a tutorial, Interviews 03 and 04 found contextual guidance useful, and Interview 04 requested
+          convenient phone access. The next wireframe update should include an optional walkthrough and responsive
+          mobile flows while keeping them dismissible.</li>
       </ul>
     </section>
 
@@ -4390,7 +4465,7 @@
       </div>
       <p class="lead">Based on the conclusions uncovered during our face-to-face interviews, we updated the SFA
         wireframes
-        across five key areas:</p>
+        across seven key areas:</p>
 
       <ul class="m2-evidence-list" style="margin: 16px 0 24px; font-size: 14px;">
         <li><strong>Landing Page Trust &amp; Security Block:</strong> Added a dedicated section explaining read-only
@@ -4413,18 +4488,20 @@
         <li><strong>Onboarding Bank Selection Fallback:</strong> Added an <em>"Other banks"</em> option during account
           setup
           and automatic bank detection for statement imports.</li>
+        <li><strong>Staged Trust Onboarding:</strong> Added statement import before bank authorization so users can
+          evaluate the dashboard, balances and transaction categorisation before granting access.</li>
+        <li><strong>Mobile-Oriented Wireframe Coverage:</strong> Added responsive dashboard, transaction and budget
+          screens for convenient phone access; the wireframes do not assume a native app implementation.</li>
       </ul>
 
-      <!-- Replace the PDF link with the updated one for M4 -->
-      <!-- If using images instead of a PDF, replace the iframe with standard <img> tags -->
       <div class="m3-pdf-preview">
-        <iframe src="assets/m4/SFA-M4-Wireframes-Updated.pdf#toolbar=0&amp;navpanes=0&amp;view=FitH"
-          title="SFA M4 updated clickable wireframes PDF" loading="lazy">
-          Your browser does not support embedded PDFs. <a href="assets/m4/SFA-M4-Wireframes-Updated.pdf">Download the
-            updated wireframes PDF</a>.
+        <iframe src="assets/m4/SFA-M4-Wireframes-Navigabile.pdf#toolbar=0&amp;navpanes=0&amp;view=FitH"
+          title="SFA M4 updated navigable wireframes PDF" loading="lazy">
+          Your browser does not support embedded PDFs. <a href="assets/m4/SFA-M4-Wireframes-Navigabile.pdf">Download the
+            updated SFA wireframes PDF</a>.
         </iframe>
       </div>
-      <p><a href="assets/m4/SFA-M4-Wireframes-Updated.pdf" download>Download the updated wireframes PDF</a></p>
+      <p><a href="assets/m4/SFA-M4-Wireframes-Navigabile.pdf" download>Download the SFA wireframes PDF</a></p>
     </section>
     <!-- END M4 -->
     <footer>
@@ -4439,10 +4516,6 @@
         link.closest('.mobile-menu').removeAttribute('open');
       });
     });
-    // Open M3 by default while preserving explicit section links.
-    if (!window.location.hash) {
-      window.location.hash = 'm3';
-    }
   </script>
 </body>
 
