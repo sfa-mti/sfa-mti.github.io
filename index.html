@@ -11,7 +11,7 @@
   <script>
     // Set the initial milestone before layout rendering.
     if (!window.location.hash) {
-      window.history.replaceState(null, '', '#m4');
+      window.history.replaceState(null, '', '#m5');
     }
   </script>
   <style>
@@ -2232,6 +2232,106 @@
     }
 
     /* END M4 CSS */
+
+    /* START M5 CSS */
+    #m5 h2 {
+      font: 400 clamp(38px, 4vw, 60px)/1.08 Georgia, serif;
+      letter-spacing: -1.8px;
+      margin-top: 24px;
+      max-width: 780px;
+    }
+
+    #m5 .intro {
+      max-width: 760px;
+    }
+
+    .m5-shot {
+      margin-top: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--white);
+    }
+
+    .m5-shot img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .m5-shot figcaption {
+      padding: 10px 14px;
+      border-top: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .m5-funnel {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .m5-funnel-step {
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .m5-funnel-step .m5-step-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--soft);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .m5-funnel-step strong {
+      display: block;
+      font: 400 30px/1.15 Georgia, serif;
+      color: var(--ink);
+      margin: 4px 0;
+    }
+
+    .m5-funnel-step small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .m5-winner-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--green);
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      margin-left: 6px;
+    }
+
+    @media (max-width: 760px) {
+      #m5 h2 {
+        font-size: 38px;
+        letter-spacing: -1px;
+      }
+
+      .m5-funnel {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* END M5 CSS */
   </style>
 </head>
 
@@ -2286,6 +2386,16 @@
           <a href="#m4-interviews"><span>03</span> Face-to-face interviews</a>
           <a href="#m4-conclusions"><span>04</span> Findings & conclusions</a>
           <a href="#m4-wireframes"><span>05</span> Updated wireframes</a>
+        </div>
+      </details>
+      <details class="nav-group" open>
+        <summary><span>M5</span> Lead Generation &amp; Analytics</summary>
+        <div class="nav-children">
+          <a href="#m5"><span>00</span> M5 overview</a>
+          <a href="#m5-leads"><span>01</span> Lead collection setup</a>
+          <a href="#m5-analytics"><span>02</span> PostHog analytics &amp; funnel</a>
+          <a href="#m5-campaign"><span>03</span> Distribution &amp; posts</a>
+          <a href="#m5-comparison"><span>04</span> Channel comparison &amp; insights</a>
         </div>
       </details>
     </nav>
@@ -2347,6 +2457,16 @@
             <a href="#m4-interviews"><span>03</span> Face-to-face interviews</a>
             <a href="#m4-conclusions"><span>04</span> Findings & conclusions</a>
             <a href="#m4-wireframes"><span>05</span> Updated wireframes</a>
+          </div>
+        </details>
+        <details class="nav-group" open>
+          <summary><span>M5</span> Lead Generation &amp; Analytics</summary>
+          <div class="nav-children">
+            <a href="#m5"><span>00</span> M5 overview</a>
+            <a href="#m5-leads"><span>01</span> Lead collection setup</a>
+            <a href="#m5-analytics"><span>02</span> PostHog analytics &amp; funnel</a>
+            <a href="#m5-campaign"><span>03</span> Distribution &amp; posts</a>
+            <a href="#m5-comparison"><span>04</span> Channel comparison &amp; insights</a>
           </div>
         </details>
       </nav>
@@ -4245,7 +4365,9 @@
           <p class="m2-caption">Target Segment (Multi-bank user) · Duration: 13:50</p>
 
           <video controls preload="metadata" aria-label="Interview 01 video recording">
-            <source src="https://media.githubusercontent.com/media/sfa-mti/sfa-mti.github.io/main/assets/m4/interview-01-multi-bank-notes.mp4" type="video/mp4">
+            <source
+              src="https://media.githubusercontent.com/media/sfa-mti/sfa-mti.github.io/main/assets/m4/interview-01-multi-bank-notes.mp4"
+              type="video/mp4">
             Your browser does not support embedded video.
           </video>
 
@@ -4288,7 +4410,9 @@
           <p class="m2-caption">Target Segment (Young professional / Student) · Duration: 17:37</p>
 
           <video controls preload="metadata" aria-label="Interview 02 video recording">
-            <source src="https://media.githubusercontent.com/media/sfa-mti/sfa-mti.github.io/main/assets/m4/interview-02-multi-bank-ai.mp4" type="video/mp4">
+            <source
+              src="https://media.githubusercontent.com/media/sfa-mti/sfa-mti.github.io/main/assets/m4/interview-02-multi-bank-ai.mp4"
+              type="video/mp4">
             Your browser does not support embedded video.
           </video>
 
@@ -4334,7 +4458,9 @@
           <p class="m2-caption">Target Segment (Employed / Investor) · Duration: 17:50</p>
 
           <video controls preload="metadata" aria-label="Interview 03 video recording">
-            <source src="https://media.githubusercontent.com/media/sfa-mti/sfa-mti.github.io/main/assets/m4/interview-03-money-manager.mp4" type="video/mp4">
+            <source
+              src="https://media.githubusercontent.com/media/sfa-mti/sfa-mti.github.io/main/assets/m4/interview-03-money-manager.mp4"
+              type="video/mp4">
             Your browser does not support embedded video.
           </video>
 
@@ -4378,7 +4504,9 @@
           <p class="m2-caption">Target Segment (Potential mobile user) · Duration: 15:00</p>
 
           <video controls preload="metadata" aria-label="Interview 04 video recording">
-            <source src="https://media.githubusercontent.com/media/sfa-mti/sfa-mti.github.io/main/assets/m4/interview-04-trust-mobile.mp4" type="video/mp4">
+            <source
+              src="https://media.githubusercontent.com/media/sfa-mti/sfa-mti.github.io/main/assets/m4/interview-04-trust-mobile.mp4"
+              type="video/mp4">
             Your browser does not support embedded video.
           </video>
 
@@ -4406,7 +4534,8 @@
 
           <h4>Impact on product &amp; wireframes</h4>
           <p><strong>Actionable updates:</strong> Add statement import before automatic bank authorization, clarify
-            spending, balance and remaining funds, distinguish the total budget from category limits, and add an optional
+            spending, balance and remaining funds, distinguish the total budget from category limits, and add an
+            optional
             mobile-oriented onboarding tutorial. The mobile need should be represented as responsive or dedicated
             wireframe coverage, not as an already decided native implementation.</p>
         </article>
@@ -4452,7 +4581,8 @@
           Interviews 02 and 03 asked for unnecessary spending spikes and concrete alternatives. Interview 04 requested
           clearer explanations around totals and budgeting, but did not provide enough evidence to judge AI
           recommendations.</li>
-        <li><strong>6. A short optional guide and mobile access improve discoverability:</strong> Interview 01 explicitly
+        <li><strong>6. A short optional guide and mobile access improve discoverability:</strong> Interview 01
+          explicitly
           requested a tutorial, Interviews 03 and 04 found contextual guidance useful, and Interview 04 requested
           convenient phone access. The next wireframe update should include an optional walkthrough and responsive
           mobile flows while keeping them dismissible.</li>
@@ -4504,6 +4634,378 @@
       <p><a href="assets/m4/SFA-M4-Wireframes-Navigabile.pdf" download>Download the SFA wireframes PDF</a></p>
     </section>
     <!-- END M4 -->
+    <!-- START M5 -->
+    <section class="hero m3-hero" id="m5" aria-labelledby="m5-title">
+      <p class="eyebrow">M5 / Lead Generation &amp; Analytics</p>
+      <h2 id="m5-title">Capturing early interest<br>and measuring acquisition channels.</h2>
+      <p class="intro">For this milestone, we added a lead capture section and PostHog analytics (Web Analytics,
+        Product Analytics conversion funnel, and Session Replay) to our live landing page, promoted SFA across social
+        channels, and compared channel performance.</p>
+      <div class="hero-footer">
+        <div><strong>Lead Generation &amp; Analytics</strong><small>Milestone 5 · 26 November 2026</small></div>
+        <span class="hero-index" aria-hidden="true">M5</span>
+      </div>
+    </section>
+
+    <section class="m2-section" id="m5-leads" aria-labelledby="m5-leads-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">01</span>
+        <h2 id="m5-leads-title">Lead Collection on the Landing Page</h2>
+      </div>
+      <p class="lead">We integrated an early-access waitlist and newsletter signup section directly on <a
+          href="https://smart-finance-advisor-production.vercel.app/" target="_blank" rel="noopener noreferrer">our live
+          landing page</a> so interested visitors can leave their contact details and follow product updates.</p>
+
+      <div class="m2-grid m2-two" style="margin-top: 24px;">
+        <div class="m2-card">
+          <span class="m2-status">Completed · Step 1</span>
+          <h3>Waitlist &amp; Newsletter Capture</h3>
+          <p>Visitors can submit their email address to join the early-access list, receive launch notifications, and
+            test the multi-bank dashboard first.</p>
+          <ul style="margin-top: 12px; padding-left: 18px; font-size: 13px;">
+            <li><strong>Placement:</strong> Positioned in the primary call-to-action area (<em>&ldquo;Fii la curent cu
+                noutățile SFA&rdquo;</em>) after the security &amp; features overview.</li>
+            <li><strong>Captured data:</strong> Email address and explicit newsletter opt-in consent.</li>
+            <li><strong>Integration tool:</strong> Formspree / PostHog event tracking connected to an instant
+              confirmation state.</li>
+          </ul>
+        </div>
+        <div class="m2-card">
+          <span class="m2-card-label">Conversion Design Alignment (from M4)</span>
+          <h3>Reducing Signup Friction</h3>
+          <p>Based on our M4 face-to-face interviews, visitors hesitate to share financial information without clear
+            privacy guarantees.</p>
+          <ul style="margin-top: 12px; padding-left: 18px; font-size: 13px;">
+            <li><strong>No bank credentials required:</strong> Signing up for the waitlist only requires an email
+              address—zero Open Banking authorization upfront.</li>
+            <li><strong>Upfront privacy reassurance:</strong> Placed directly alongside read-only access and a direct
+              link to our privacy policy.</li>
+          </ul>
+        </div>
+      </div>
+
+      <figure class="m5-shot">
+        <img src="assets/m5/newsletter.png"
+          alt="Smart Finance Advisor landing page lead collection and newsletter signup section" loading="lazy">
+        <figcaption>Live lead collection section on smart-finance-advisor-production.vercel.app.</figcaption>
+      </figure>
+    </section>
+
+    <section class="m2-section" id="m5-analytics" aria-labelledby="m5-analytics-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">02</span>
+        <h2 id="m5-analytics-title">PostHog Analytics, Funnel &amp; Session Replay</h2>
+      </div>
+      <p class="lead">We instrumented our live landing page with <strong>PostHog</strong> to measure acquisition
+        traffic, attribute visits across Reddit communities via <code>utm_content</code> parameters, track
+        call-to-action conversions through a Product Analytics funnel, and inspect real visitor navigation via Session
+        Replay.</p>
+
+      <div class="m2-grid m2-metrics" style="margin-top: 24px;">
+        <div class="m2-card">
+          <span class="m2-stat">58 <small>unique visitors</small></span>
+          <h3>140 page views · 68 sessions</h3>
+          <p class="m2-caption">34 unique visits directly attributed via Reddit UTM tags (<code>r_robursa</code>,
+            <code>rprogramare</code>, <code>r_rougenz</code>, <code>r_roumanie</code>, <code>r_rogenz</code>) plus 29
+            initial untagged visits.
+          </p>
+        </div>
+        <div class="m2-card">
+          <span class="m2-stat">2m 49s <small>avg. session</small></span>
+          <h3>Strong content engagement</h3>
+          <p class="m2-caption">Visitors spent nearly three minutes per session reading the multi-bank overview, AI
+            assistant preview, and security guarantees.</p>
+        </div>
+        <div class="m2-card">
+          <span class="m2-stat">54% <small>engaged visits</small></span>
+          <h3>46% bounce rate</h3>
+          <p class="m2-caption">Over half of incoming visitors scrolled past the hero section and actively explored the
+            landing page features.</p>
+        </div>
+      </div>
+
+      <div class="m2-subsection">
+        <h3>CTA Conversion Funnel (Product Analytics)</h3>
+        <p>We configured a two-step conversion funnel in PostHog tracking how visitors progress from viewing the landing
+          page (<code>Pageview</code>) to clicking one of our primary call-to-action triggers
+          (<code>cta_clicked</code> or <code>landing_cta_clicked</code>):</p>
+
+        <div class="m5-funnel" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+          <div class="m5-funnel-step">
+            <span class="m5-step-tag">Step 1 · Entry</span>
+            <strong>64 persons</strong>
+            <small>100% · Viewed landing page (<code>Pageview</code>)</small>
+          </div>
+          <div class="m5-funnel-step">
+            <span class="m5-step-tag">Step 2 · CTA Interaction</span>
+            <strong>8 persons</strong>
+            <small>12.5% conversion rate · Triggered <code>cta_clicked</code> / <code>landing_cta_clicked</code></small>
+          </div>
+        </div>
+      </div>
+
+      <div class="m2-grid m2-two" style="margin-top: 24px;">
+        <div class="m2-card">
+          <span class="m2-status">Web Analytics · Overview</span>
+          <h3>Overall Traffic &amp; Session Metrics</h3>
+          <p>PostHog Web Analytics recorded <strong>58 unique visitors</strong>, <strong>140 page views</strong>, and
+            <strong>68 sessions</strong>, with an average session duration of <strong>2m 49s</strong> and a
+            <strong>46% bounce rate</strong>.
+          </p>
+          <figure class="m5-shot">
+            <img src="assets/m5/posthog-web-analytics.png"
+              alt="PostHog Web Analytics summary showing 58 visitors, 140 page views, 68 sessions, 2m 49s duration, and 46% bounce rate"
+              loading="lazy">
+            <figcaption>PostHog Web Analytics summary KPIs across the campaign window.</figcaption>
+          </figure>
+        </div>
+
+        <div class="m2-card">
+          <span class="m2-status">Web Analytics · Attribution</span>
+          <h3>UTM Content Source Breakdown</h3>
+          <p>Using <code>utm_content</code> links, PostHog isolated traffic by subreddit: <code>r_robursa</code> (17
+            visitors / 27 views), <code>rprogramare</code> (11 visitors / 24 views), <code>r_rougenz</code> (3 visitors
+            / 3 views), <code>r_roumanie</code> (2 visitors / 3 views), and <code>r_rogenz</code> (1 visitor / 1 view).
+          </p>
+          <figure class="m5-shot">
+            <img src="assets/m5/posthog-utm-sources.png"
+              alt="PostHog Sources by UTM content table showing visitor and view counts per Reddit community"
+              loading="lazy">
+            <figcaption>PostHog breakdown of unique visitors and page views by <code>utm_content</code>.</figcaption>
+          </figure>
+        </div>
+
+        <div class="m2-card">
+          <span class="m2-status">Product Analytics · Funnel</span>
+          <h3>Landing Page CTA Conversion</h3>
+          <p>Out of <strong>64 persons</strong> entering at <code>Pageview</code>, <strong>8 persons (12.5%)</strong>
+            clicked a primary CTA button (<code>cta_clicked</code> or <code>landing_cta_clicked</code>), while 56
+            dropped off after reading.</p>
+          <figure class="m5-shot">
+            <img src="assets/m5/posthog-funnel.png"
+              alt="PostHog Product Analytics funnel showing 64 persons at Pageview and 8 persons (12.5%) clicking CTA"
+              loading="lazy">
+            <figcaption>PostHog conversion funnel from <code>Pageview</code> (100%) to CTA click (12.5%).</figcaption>
+          </figure>
+        </div>
+
+        <div class="m2-card">
+          <span class="m2-status">Session Replay · Recording</span>
+          <h3>Real Visitor Navigation &amp; Reading Flow</h3>
+          <p>Session recordings show visitors scanning down to the waitlist section first, then scrolling back up to
+            inspect the top navigation, all four feature cards, and the AI assistant preview before deciding.</p>
+          <figure class="m5-shot">
+            <video src="assets/m5/posthog-session-replay.mp4" controls muted loop playsinline
+              style="width: 100%; height: auto; display: block;"
+              aria-label="PostHog Session Replay video showing a visitor scrolling through the Smart Finance Advisor landing page"></video>
+            <figcaption>PostHog Session Replay recording capturing scroll path, cursor hover, and section pauses.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="m2-callout">
+        <p><strong>Key Behavioral Observations from Session Replay:</strong> Visitors frequently perform a quick initial
+          scroll down to the <em>&ldquo;Începe să-ți înțelegi finanțele&rdquo;</em> waitlist block to see what action is
+          requested, then scroll back up to evaluate the product in detail—hovering sequentially across all four core
+          capabilities (<em>Grupaje de portofoliu</em>, <em>Analiza cheltuielilor</em>, <em>Bugete și plăți
+            recurente</em>, <em>Recomandări inteligente</em>), checking the conversational AI assistant card, and
+          pausing near the read-only security notice (<em>&ldquo;Nu stocăm parole&rdquo;</em>).</p>
+      </div>
+    </section>
+
+    <section class="m2-section" id="m5-campaign" aria-labelledby="m5-campaign-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">03</span>
+        <h2 id="m5-campaign-title">Lead Generation Campaign &amp; Social Distribution</h2>
+      </div>
+      <p class="intro-note">To drive targeted traffic to our landing page, we shared Smart Finance Advisor across four
+        Romanian Reddit communities (<code>r/robursa</code>, <code>r/programare</code>, <code>r/RouGenZ</code>, and
+        <code>r/Roumanie</code>), tagging each URL with a distinct <code>utm_content</code> parameter to attribute
+        visits and conversion behavior in PostHog.
+      </p>
+
+      <div class="m2-grid m2-two">
+        <!-- Channel 01: r/robursa -->
+        <article class="m2-card" aria-labelledby="m5-post-01-title">
+          <span class="m2-card-label">Channel 01 · Reddit (<code>utm_content=r_robursa</code>)</span>
+          <h3 id="m5-post-01-title">[Proiect studentesc] Smart Finance Advisor – r/robursa</h3>
+          <p class="m2-caption">Published: 25 Nov 2026 · <a
+              href="https://www.reddit.com/r/robursa/comments/1y5g5m6/proiect_studentesc_smart_finance_advisor/"
+              target="_blank" rel="noopener noreferrer">View post permalink ↗</a></p>
+          <p style="margin-top: 10px;"><strong>Angle &amp; message:</strong> Introduced our student team from Automatică
+            și Calculatoare (UPB) and pitched unified multi-account tracking, automated budgeting, and AI-driven
+            financial insights to an audience actively managing banking and investment accounts.</p>
+          <ul style="margin-top: 10px; padding-left: 18px; font-size: 12px;">
+            <li><strong>Reddit engagement:</strong> 4.4K views · 0 net upvotes · 9 comments</li>
+            <li><strong>Attributed traffic (PostHog):</strong> 17 unique visitors · 27 page views</li>
+          </ul>
+          <figure class="m5-shot">
+            <img src="assets/m5/post-robursa.jpeg" alt="Screenshot of the Smart Finance Advisor post on r/robursa"
+              loading="lazy">
+          </figure>
+        </article>
+
+        <!-- Channel 02: r/programare -->
+        <article class="m2-card" aria-labelledby="m5-post-02-title">
+          <span class="m2-card-label">Channel 02 · Reddit (<code>utm_content=rprogramare</code>)</span>
+          <h3 id="m5-post-02-title">Smart finance advisor – Project (r/programare)</h3>
+          <p class="m2-caption">Published: 25 Nov 2026</p>
+          <p style="margin-top: 10px;"><strong>Angle &amp; message:</strong> Shared a visual mockup of the consolidated
+            financial dashboard alongside our 4-student team's concept for AI-assisted expense categorization, inviting
+            technical and product feedback from Romanian developers.</p>
+          <ul style="margin-top: 10px; padding-left: 18px; font-size: 12px;">
+            <li><strong>Reddit engagement:</strong> ~1.9K views · 4 upvotes · 5 comments</li>
+            <li><strong>Attributed traffic (PostHog):</strong> 11 unique visitors · 24 page views</li>
+          </ul>
+          <figure class="m5-shot">
+            <img src="assets/m5/post-programare.png" alt="Screenshot of the Smart Finance Advisor post on r/programare"
+              loading="lazy">
+          </figure>
+        </article>
+
+        <!-- Channel 03: r/RouGenZ -->
+        <article class="m2-card" aria-labelledby="m5-post-03-title">
+          <span class="m2-card-label">Channel 03 · Reddit (<code>utm_content=r_rougenz</code>)</span>
+          <h3 id="m5-post-03-title">[Proiect studentesc] Smart Finance Advisor – r/RouGenZ</h3>
+          <p class="m2-caption">Published: 25 Nov 2026 · <a
+              href="https://www.reddit.com/r/RouGenZ/comments/1y5gicp/proiect_studentesc_smart_finance_advisor/"
+              target="_blank" rel="noopener noreferrer">View post permalink ↗</a></p>
+          <p style="margin-top: 10px;"><strong>Angle &amp; message:</strong> Targeted students and young adults looking
+            for a simpler, intuitive way to monitor monthly spending habits across multiple accounts and test an early
+            student-built MVP.</p>
+          <ul style="margin-top: 10px; padding-left: 18px; font-size: 12px;">
+            <li><strong>Reddit engagement:</strong> 1.3K views · 2 upvotes · 2 comments</li>
+            <li><strong>Attributed traffic (PostHog):</strong> 4 unique visitors · 4 page views</li>
+          </ul>
+          <figure class="m5-shot">
+            <img src="assets/m5/post-rougenz.jpeg" alt="Screenshot of the Smart Finance Advisor post on r/RouGenZ"
+              loading="lazy">
+          </figure>
+        </article>
+
+        <!-- Channel 04: r/Roumanie -->
+        <article class="m2-card" aria-labelledby="m5-post-04-title">
+          <span class="m2-card-label">Channel 04 · Reddit (<code>utm_content=r_roumanie</code>)</span>
+          <h3 id="m5-post-04-title">[Proiect studentesc] Smart Finance Advisor – r/Roumanie</h3>
+          <p class="m2-caption">Published: 25 Nov 2026 · <a
+              href="https://www.reddit.com/r/Roumanie/comments/1y5gxxz/proiect_studentesc_smart_finance_advisor/"
+              target="_blank" rel="noopener noreferrer">View post permalink ↗</a></p>
+          <p style="margin-top: 10px;"><strong>Angle &amp; message:</strong> Shared the project concept in a general
+            Romanian community under the <em>Economie</em> flair to validate broader interest in unified expense
+            tracking and waitlist signups.</p>
+          <ul style="margin-top: 10px; padding-left: 18px; font-size: 12px;">
+            <li><strong>Reddit engagement:</strong> 737 views · 2 upvotes · 0 comments</li>
+            <li><strong>Attributed traffic (PostHog):</strong> 2 unique visitors · 3 page views</li>
+          </ul>
+          <figure class="m5-shot">
+            <img src="assets/m5/post-roumanie.jpeg" alt="Screenshot of the Smart Finance Advisor post on r/Roumanie"
+              loading="lazy">
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="m2-section" id="m5-comparison" aria-labelledby="m5-comparison-title">
+      <div class="section-head"><span class="section-number" aria-hidden="true">04</span>
+        <h2 id="m5-comparison-title">Lead Channel Comparison &amp; Campaign Conclusions</h2>
+      </div>
+      <p class="lead">Comparing organic reach, landing page traffic, and repeat engagement across all four Reddit
+        communities tested during Milestone 5.</p>
+
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Lead generation channel comparison table">
+        <table class="m2-wide-table">
+          <thead>
+            <tr>
+              <th scope="col">Channel (<code>utm_content</code>)</th>
+              <th scope="col">Permalink</th>
+              <th scope="col">Post Views / Comments</th>
+              <th scope="col">Landing Visitors</th>
+              <th scope="col">Page Views</th>
+              <th scope="col">Views / Visitor</th>
+              <th scope="col">Qualitative Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Reddit · r/robursa</strong> (<code>r_robursa</code>) <span class="m5-winner-badge">Top
+                  Performer</span></td>
+              <td><a href="https://www.reddit.com/r/robursa/comments/1y5g5m6/proiect_studentesc_smart_finance_advisor/"
+                  target="_blank" rel="noopener noreferrer">Post link ↗</a></td>
+              <td>4.4K views · 9 comments</td>
+              <td><strong>17</strong></td>
+              <td>27</td>
+              <td>1.59</td>
+              <td>Highest reach, active discussion (9 comments), and strongest visitor volume; audience immediately
+                understood multi-account pain points.</td>
+            </tr>
+            <tr>
+              <td><strong>Reddit · r/programare</strong> (<code>rprogramare</code>)</td>
+              <td>—</td>
+              <td>~1.9K views · 5 comments</td>
+              <td><strong>11</strong></td>
+              <td>24</td>
+              <td>2.18</td>
+              <td>Visual dashboard preview drove the highest repeat page views (2.18 views/visitor) and constructive
+                technical feedback.</td>
+            </tr>
+            <tr>
+              <td><strong>Reddit · r/RouGenZ</strong> (<code>r_rougenz</code>)</td>
+              <td><a href="https://www.reddit.com/r/RouGenZ/comments/1y5gicp/proiect_studentesc_smart_finance_advisor/"
+                  target="_blank" rel="noopener noreferrer">Post link ↗</a></td>
+              <td>1.3K views · 2 comments</td>
+              <td><strong>4</strong></td>
+              <td>4</td>
+              <td>1.00</td>
+              <td>Good organic impressions among students and young adults; moderate click-through to the landing page.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Reddit · r/Roumanie</strong> (<code>r_roumanie</code>)</td>
+              <td><a href="https://www.reddit.com/r/Roumanie/comments/1y5gxxz/proiect_studentesc_smart_finance_advisor/"
+                  target="_blank" rel="noopener noreferrer">Post link ↗</a></td>
+              <td>737 views · 0 comments</td>
+              <td><strong>2</strong></td>
+              <td>3</td>
+              <td>1.50</td>
+              <td>Broad non-niche subreddit yielded lower engagement and fewer clicks compared to finance and tech
+                communities.</td>
+            </tr>
+            <tr>
+              <td>Direct / Pre-UTM Visits (<code>(not set)</code>)</td>
+              <td>—</td>
+              <td>—</td>
+              <td>29</td>
+              <td>82</td>
+              <td>2.83</td>
+              <td>Initial launch shares and direct visits recorded prior to adding <code>utm_content</code> parameters.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Total Campaign (PostHog)</strong></td>
+              <td>—</td>
+              <td><strong>~8.3K post views · 16 comments</strong></td>
+              <td><strong>58</strong></td>
+              <td><strong>140</strong></td>
+              <td><strong>2.41</strong></td>
+              <td>68 sessions · 8 CTA clicks (12.5% funnel rate) · Niche finance and tech communities outperformed
+                general feeds.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="m2-callout">
+        <p><strong>Winning Channel &amp; Why It Worked Best:</strong> <strong>Reddit · r/robursa</strong> generated the
+          highest attributed traffic (<strong>17 unique visitors</strong> and <strong>27 page views</strong> from
+          <strong>4.4K post views</strong> and <strong>9 comments</strong>), followed closely by
+          <strong>r/programare</strong> (<strong>11 unique visitors</strong> and <strong>24 page views</strong>, with
+          the highest repeat-view ratio at 2.18 views per visitor). Niche communities focused on personal finance and
+          software engineering significantly outperformed general-interest subreddits (<code>r/Roumanie</code> and
+          <code>r/RouGenZ</code>) because members already experience the friction of tracking multiple bank and
+          investment accounts manually—and pairing the post with a visual UI mockup further increased curiosity and
+          on-page exploration.
+        </p>
+      </div>
+    </section>
+    <!-- END M5 -->
     <footer>
       <span>Smart Finance Advisor · Software Engineering Fiki</span>
       <a href="#overview">Back to overview ↑</a>
